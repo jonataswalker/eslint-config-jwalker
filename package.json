@@ -1,10 +1,16 @@
 {
   "name": "eslint-config-jwalker",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Shareable ESLint config",
   "author": "Jonatas Walker",
-  "homepage": "https://github.com/jonataswalker/ol3-geocoder",
+  "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
   "main": "index.js",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "style checker",
+    "code checker"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/jonataswalker/eslint-config-jwalker.git"
