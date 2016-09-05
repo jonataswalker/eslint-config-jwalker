@@ -1,0 +1,20 @@
+{
+  "name": "eslint-config-jwalker",
+  "version": "1.0.0",
+  "description": "Shareable ESLint config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonataswalker/eslint-config-jwalker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonataswalker/eslint-config-jwalker/issues"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "./index.js"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0"
+  }
+}
