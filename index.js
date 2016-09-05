@@ -28,7 +28,7 @@ module.exports = {
     'no-class-assign': 2,
     'no-caller': 2,
     'no-cond-assign': 2,
-    'no-console': 2,
+    'no-console': [2, { allow: ["warn", "error"]}],
     'no-constant-condition': 2,
     'no-control-regex': 2,
     'no-debugger': 2,
