@@ -20,7 +20,7 @@ module.exports = {
     'eqeqeq': [2, 'smart'],
     'func-call-spacing': [2, 'never'],
     'indent': [2, 2, { VariableDeclarator: 2, SwitchCase: 1 }],
-    'key-spacing': [1, { beforeColon: false, afterColon: true }],
+    'key-spacing': 0,
     'keyword-spacing': 2,
     'max-depth': [1, 5],
     'max-len': [1, 100, 2, { ignoreUrls: true}],
