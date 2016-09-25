@@ -23,7 +23,7 @@ module.exports = {
     'key-spacing': 0,
     'keyword-spacing': 2,
     'max-depth': [1, 5],
-    'max-len': [1, 100, 2, { ignoreUrls: true }],
+    'max-len': [2, 80, 2, { ignoreUrls: true }],
     'no-alert': 2,
     'no-class-assign': 2,
     'no-caller': 2,
@@ -52,8 +52,13 @@ module.exports = {
     'no-irregular-whitespace': 2,
     'no-mixed-spaces-and-tabs': [2, false],
     'no-multiple-empty-lines': 2,
-    'no-multi-spaces': [2, { exceptions: {
-      VariableDeclarator: true, ImportDeclaration: true }}],
+    'no-multi-spaces': [2, {
+      exceptions: {
+        VariableDeclarator: true,
+        ImportDeclaration: true,
+        AssignmentExpression: true
+      }
+    }],
     'no-new-func': 2,
     'no-new-wrappers': 2,
     'no-obj-calls': 2,
