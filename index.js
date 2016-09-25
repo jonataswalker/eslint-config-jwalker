@@ -91,7 +91,10 @@ module.exports = {
     'no-whitespace-before-property': 2,
     'no-with': 2,
     'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
-    'quotes': [2, 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+    'quotes': [2, 'single', {
+      avoidEscape: true,
+      allowTemplateLiterals: true
+    }],
     'rest-spread-spacing': [2, 'never'],
     'semi': 2,
     'semi-spacing': 2,
