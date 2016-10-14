@@ -23,7 +23,7 @@
     "extends": "./index.js"
   },
   "devDependencies": {
-    "eslint": "^3.7.1"
+    "eslint": "^3.8.0"
   },
   "scripts": {
     "eslint": "eslint index.js",
