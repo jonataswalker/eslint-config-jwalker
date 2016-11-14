@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jwalker",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Shareable ESLint config",
   "author": "Jonatas Walker",
   "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
@@ -23,17 +23,6 @@
     "extends": "./index.js"
   },
   "devDependencies": {
-    "eslint": "^3.9.0"
-  },
-  "scripts": {
-    "eslint": "eslint index.js",
-    "pretest": "npm install",
-    "test": "npm run eslint",
-    "commit": "git add . && git commit -m \"Bump to v$npm_package_version\"",
-    "tag": "git tag -a $npm_package_version -m \"Bump to v$npm_package_version\"",
-    "push": "git push && git push origin $npm_package_version",
-    "preversion": "npm run test",
-    "version": "npm run commit",
-    "postversion": "npm run tag && npm run push && npm publish"
+    "eslint": "^3.10.0"
   }
 }
