@@ -23,6 +23,6 @@
     "extends": "./index.js"
   },
   "devDependencies": {
-    "eslint": "^3.10.2"
+    "eslint": "^3.11.0"
   }
 }
