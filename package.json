@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jwalker",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "Shareable ESLint config",
   "author": "Jonatas Walker",
   "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
@@ -23,6 +23,6 @@
     "extends": "./index.js"
   },
   "devDependencies": {
-    "eslint": "^3.10.0"
+    "eslint": "^3.11.1"
   }
 }
