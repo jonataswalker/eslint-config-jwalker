@@ -79,6 +79,7 @@ module.exports = {
     'no-trailing-spaces': 2,
     'no-undef': 2,
     'no-undef-init': 2,
+    'no-unneeded-ternary': 2,
     'no-unexpected-multiline': 2,
     'no-unreachable': 2,
     'no-unsafe-negation': 2,
