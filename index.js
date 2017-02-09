@@ -6,9 +6,7 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 7,
-    ecmaFeatures: {
-      impliedStrict: true
-    }
+    sourceType: 'module'
   },
   rules: {
     'array-bracket-spacing': 2,
