@@ -5,8 +5,10 @@ module.exports = {
     browser: true
   },
   parserOptions: {
-    ecmaVersion: 8,
-    sourceType: 'module'
+    ecmaVersion: 7,
+    ecmaFeatures: {
+      impliedStrict: true
+    }
   },
   rules: {
     'array-bracket-spacing': 2,
