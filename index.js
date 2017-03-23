@@ -72,7 +72,9 @@ module.exports = {
     'no-self-assign': 2,
     'no-self-compare': 2,
     'no-shadow': [2, {
-      'allow': ['resolve', 'reject', 'done', 'next', 'cb', 'i', 'err', 'error']
+      'allow': [
+        'resolve', 'reject', 'done', 'next', 'cb', 'i', 'err', 'error'
+      ]
     }],
     'no-shadow-restricted-names': 2,
     'no-sparse-arrays': 2,
@@ -98,11 +100,14 @@ module.exports = {
       allowTemplateLiterals: true
     }],
     'rest-spread-spacing': [2, 'never'],
-    'semi': 2,
+    'semi': [2, 'always', { omitLastInOneLineBlock: true }],
     'semi-spacing': 2,
     'strict': [2, 'safe'],
     'space-before-blocks': 2,
-    'space-before-function-paren': [2, { anonymous: 'always', named: 'never' }],
+    'space-before-function-paren': [2, {
+      anonymous: 'always',
+      named: 'never'
+    }],
     'space-in-parens': 2,
     'space-infix-ops': 2,
     'space-unary-ops': 2,
