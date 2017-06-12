@@ -1,16 +1,10 @@
 {
   "name": "eslint-config-jwalker",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Shareable ESLint config",
   "author": "Jonatas Walker",
   "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
   "main": "index.js",
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "style checker",
-    "code checker"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/jonataswalker/eslint-config-jwalker.git"
@@ -22,7 +16,7 @@
   "eslintConfig": {
     "extends": "./index.js"
   },
-  "devDependencies": {
-    "eslint": "^3.18.0"
+  "peerDependencies": {
+    "eslint": ">=4.0.0"
   }
 }

@@ -6,7 +6,11 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 8,
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+      experimentalObjectRestSpread: true
+    }
   },
   rules: {
     'array-bracket-spacing': 2,
@@ -28,6 +32,7 @@ module.exports = {
     'no-alert': 2,
     'no-class-assign': 2,
     'no-caller': 2,
+    'no-compare-neg-zero': 2,
     'no-cond-assign': 2,
     'no-console': [2, { allow: ['warn', 'error'] }],
     'no-constant-condition': 2,
