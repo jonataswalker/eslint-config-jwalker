@@ -1,17 +1,19 @@
 module.exports = {
+  extends: ['prettier'],
   env: {
     node: true,
     es6: true,
     browser: true
   },
   parserOptions: {
-    ecmaVersion: 8,
+    ecmaVersion: 2017,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
       experimentalObjectRestSpread: true
     }
   },
+  plugins: ['prettier'],
   rules: {
     'array-bracket-spacing': 2,
     'block-scoped-var': 2,

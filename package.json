@@ -1,13 +1,13 @@
 {
   "name": "eslint-config-jwalker",
-  "version": "3.0.0",
+  "version": "0.0.0-development",
   "description": "Shareable ESLint config",
   "author": "Jonatas Walker",
   "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jonataswalker/eslint-config-jwalker.git"
+    "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
   },
   "bugs": {
     "url": "https://github.com/jonataswalker/eslint-config-jwalker/issues"
@@ -16,7 +16,28 @@
   "eslintConfig": {
     "extends": "./index.js"
   },
+  "scripts": {
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
   "peerDependencies": {
-    "eslint": ">=4.0.0"
+    "eslint": ">= 4.8.0",
+    "eslint-config-prettier": ">= 2",
+    "eslint-plugin-prettier": ">= 2",
+    "prettier": ">= 1.7"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.7.4",
+    "semantic-release": "^8.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
