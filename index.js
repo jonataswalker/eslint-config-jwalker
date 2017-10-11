@@ -15,18 +15,26 @@ module.exports = {
   },
   plugins: ['prettier'],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'none',
+        bracketSpacing: true
+      }
+    ],
     'array-bracket-spacing': 2,
     'block-scoped-var': 2,
     'brace-style': [2, '1tbs', { allowSingleLine: true }],
     'comma-dangle': [2, 'never'],
     'comma-style': 2,
-    'complexity': [1, 20],
-    'curly': [2, 'multi-line'],
+    complexity: [1, 20],
+    curly: [2, 'multi-line'],
     'default-case': 1,
     'eol-last': 2,
-    'eqeqeq': [2, 'smart'],
+    eqeqeq: [2, 'smart'],
     'func-call-spacing': [2, 'never'],
-    'indent': [2, 2, { VariableDeclarator: 2, SwitchCase: 1 }],
+    indent: [2, 2, { VariableDeclarator: 2, SwitchCase: 1 }],
     'key-spacing': 0,
     'keyword-spacing': 2,
     'max-depth': [1, 5],
@@ -60,13 +68,16 @@ module.exports = {
     'no-irregular-whitespace': 2,
     'no-mixed-spaces-and-tabs': [2, false],
     'no-multiple-empty-lines': 2,
-    'no-multi-spaces': [2, {
-      exceptions: {
-        VariableDeclarator: true,
-        ImportDeclaration: true,
-        AssignmentExpression: true
+    'no-multi-spaces': [
+      2,
+      {
+        exceptions: {
+          VariableDeclarator: true,
+          ImportDeclaration: true,
+          AssignmentExpression: true
+        }
       }
-    }],
+    ],
     'no-new-func': 2,
     'no-new-wrappers': 2,
     'no-obj-calls': 2,
@@ -78,11 +89,12 @@ module.exports = {
     'no-return-assign': [2, 'except-parens'],
     'no-self-assign': 2,
     'no-self-compare': 2,
-    'no-shadow': [2, {
-      'allow': [
-        'resolve', 'reject', 'done', 'next', 'cb', 'i', 'err', 'error'
-      ]
-    }],
+    'no-shadow': [
+      2,
+      {
+        allow: ['resolve', 'reject', 'done', 'next', 'cb', 'i', 'err', 'error']
+      }
+    ],
     'no-shadow-restricted-names': 2,
     'no-sparse-arrays': 2,
     'no-trailing-spaces': 2,
@@ -102,19 +114,26 @@ module.exports = {
     'no-whitespace-before-property': 2,
     'no-with': 2,
     'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
-    'quotes': [2, 'single', {
-      avoidEscape: true,
-      allowTemplateLiterals: true
-    }],
+    quotes: [
+      2,
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true
+      }
+    ],
     'rest-spread-spacing': [2, 'never'],
-    'semi': [2, 'always', { omitLastInOneLineBlock: true }],
+    semi: [2, 'always', { omitLastInOneLineBlock: true }],
     'semi-spacing': 2,
-    'strict': [2, 'safe'],
+    strict: [2, 'safe'],
     'space-before-blocks': 2,
-    'space-before-function-paren': [2, {
-      anonymous: 'always',
-      named: 'never'
-    }],
+    'space-before-function-paren': [
+      2,
+      {
+        anonymous: 'always',
+        named: 'never'
+      }
+    ],
     'space-in-parens': 2,
     'space-infix-ops': 2,
     'space-unary-ops': 2,
