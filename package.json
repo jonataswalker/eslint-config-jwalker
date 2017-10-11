@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jwalker",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Shareable ESLint config",
   "author": "Jonatas Walker",
   "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
@@ -17,7 +17,8 @@
     "extends": "./index.js"
   },
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "release-it"
   },
   "peerDependencies": {
     "eslint": ">= 4.8.0",
