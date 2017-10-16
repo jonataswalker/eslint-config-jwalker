@@ -113,7 +113,8 @@ module.exports = {
     'no-use-before-define': [2, 'nofunc'],
     'no-whitespace-before-property': 2,
     'no-with': 2,
-    'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
+    // 'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
+    'object-curly-spacing': [2, 'always'],
     quotes: [
       2,
       'single',
