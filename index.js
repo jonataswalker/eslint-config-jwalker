@@ -1,5 +1,4 @@
 module.exports = {
-  extends: ['prettier'],
   env: {
     node: true,
     es6: true,
@@ -13,16 +12,7 @@ module.exports = {
       experimentalObjectRestSpread: true
     }
   },
-  plugins: ['prettier'],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'none',
-        bracketSpacing: true
-      }
-    ],
     'array-bracket-spacing': 2,
     'block-scoped-var': 2,
     'brace-style': [2, '1tbs', { allowSingleLine: true }],
