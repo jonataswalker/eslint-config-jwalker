@@ -16,15 +16,15 @@ module.exports = {
     'array-bracket-spacing': 2,
     'block-scoped-var': 2,
     'brace-style': [2, '1tbs', { allowSingleLine: true }],
-    'comma-dangle': [2, 'never'],
+    'comma-dangle': [2, 'only-multiline'],
     'comma-style': 2,
-    complexity: [1, 20],
-    curly: [2, 'multi-line'],
+    'complexity': [1, 20],
+    'curly': [2, 'multi-line'],
     'default-case': 1,
     'eol-last': 2,
-    eqeqeq: [2, 'smart'],
+    'eqeqeq': [2, 'smart'],
     'func-call-spacing': [2, 'never'],
-    indent: [2, 2, { VariableDeclarator: 2, SwitchCase: 1 }],
+    'indent': [2, 2, { VariableDeclarator: 2, SwitchCase: 1 }],
     'key-spacing': 0,
     'keyword-spacing': 2,
     'max-depth': [1, 5],
@@ -105,7 +105,7 @@ module.exports = {
     'no-with': 2,
     // 'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
     'object-curly-spacing': [2, 'always'],
-    quotes: [
+    'quotes': [
       2,
       'single',
       {
@@ -114,9 +114,9 @@ module.exports = {
       }
     ],
     'rest-spread-spacing': [2, 'never'],
-    semi: [2, 'always', { omitLastInOneLineBlock: true }],
+    'semi': [2, 'always', { omitLastInOneLineBlock: true }],
     'semi-spacing': 2,
-    strict: [2, 'safe'],
+    'strict': [2, 'safe'],
     'space-before-blocks': 2,
     'space-before-function-paren': [
       2,
