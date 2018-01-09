@@ -1,7 +1,7 @@
 const general = require('./rules/general');
-const vue = require('./rules/vue');
+// const vue = require('./rules/vue');
 
-const rules = Object.assign({}, general, vue);
+const rules = Object.assign({}, general);
 
 module.exports = {
   rules,
