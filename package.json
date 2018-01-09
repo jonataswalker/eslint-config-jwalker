@@ -20,12 +20,10 @@
     "commit": "git-cz",
     "release": "release-it"
   },
-  "peerDependencies": {
-    "eslint": ">= 4.8.0"
-  },
   "devDependencies": {
     "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.0.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.15.0"
   },
   "config": {
     "commitizen": {
