@@ -13,11 +13,11 @@ module.exports = {
       allowFirstLine: false
     }
   }],
-  'html-closing-bracket-newline': [2, {
+  'vue/html-closing-bracket-newline': [2, {
     singleline: 'never',
     multiline: 'never'
   }],
-  'html-closing-bracket-spacing': [2, {
+  'vue/html-closing-bracket-spacing': [2, {
     startTag: 'never',
     endTag: 'never',
     selfClosingTag: 'always'
