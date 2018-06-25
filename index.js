@@ -11,11 +11,7 @@ module.exports = {
     browser: true
   },
   parserOptions: {
-    ecmaVersion: 2017,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-      experimentalObjectRestSpread: true
-    }
-  },
+    ecmaVersion: 2018,
+    sourceType: 'module'
+  }
 };
