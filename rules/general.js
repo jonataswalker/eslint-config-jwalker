@@ -50,9 +50,9 @@ module.exports = {
       exceptions: {
         VariableDeclarator: true,
         ImportDeclaration: true,
-        AssignmentExpression: true
-      }
-    }
+        AssignmentExpression: true,
+      },
+    },
   ],
   'no-new-func': 2,
   'no-new-wrappers': 2,
@@ -67,7 +67,7 @@ module.exports = {
   'no-self-compare': 2,
   'no-shadow': [
     2,
-    { allow: ['resolve', 'reject', 'done', 'next', 'cb', 'i', 'err', 'error'] }
+    { allow: ['resolve', 'reject', 'done', 'next', 'cb', 'i', 'err', 'error'] },
   ],
   'no-shadow-restricted-names': 2,
   'no-sparse-arrays': 2,
@@ -94,8 +94,8 @@ module.exports = {
     'single',
     {
       avoidEscape: true,
-      allowTemplateLiterals: true
-    }
+      allowTemplateLiterals: true,
+    },
   ],
   'rest-spread-spacing': [2, 'never'],
   semi: [2, 'always', { omitLastInOneLineBlock: true }],
@@ -106,8 +106,8 @@ module.exports = {
     2,
     {
       anonymous: 'always',
-      named: 'never'
-    }
+      named: 'never',
+    },
   ],
   'space-in-parens': 2,
   'space-infix-ops': 2,
@@ -115,5 +115,5 @@ module.exports = {
   'use-isnan': 2,
   'valid-typeof': 2,
   'vars-on-top': 1,
-  'wrap-iife': [2, 'any']
+  'wrap-iife': [2, 'any'],
 };

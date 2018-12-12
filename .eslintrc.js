@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['plugin:vue/recommended', './index.js']
+  extends: ['./index.js'],
 };
