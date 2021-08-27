@@ -1,0 +1,26 @@
+module.exports = {
+    'import/named': 'error',
+    'import/default': 'error',
+    'import/namespace': 'error',
+    'import/no-absolute-path': 'off',
+    'import/no-useless-path-segments': 'error',
+    'import/no-self-import': 'error',
+    'import/export': 'error',
+    'import/no-named-as-default': 'error',
+    'import/no-named-as-default-member': 'error',
+    'import/no-deprecated': 'error',
+    'import/no-mutable-exports': 'error',
+    'import/first': 'error',
+    'import/exports-last': 'error',
+    'import/no-duplicates': 'error',
+    'import/group-exports': 'error',
+    'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/order': [
+        'error',
+        {
+            groups: ['builtin', 'external', 'internal', 'unknown', 'parent', 'sibling', 'index'],
+            'newlines-between': 'always',
+        },
+    ],
+};
