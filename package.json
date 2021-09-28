@@ -1,49 +1,50 @@
 {
-  "name": "eslint-config-jwalker",
-  "version": "6.0.0",
-  "description": "Shareable framework-agnostic ESLint config",
-  "author": "Jonatas Walker",
-  "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jonataswalker/eslint-config-jwalker/issues"
-  },
-  "license": "MIT",
-  "scripts": {
-    "commit": "git-cz",
-    "release": "release-it"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "eslint-config-jwalker",
+    "version": "6.2.0",
+    "description": "Shareable framework-agnostic ESLint config",
+    "author": "Jonatas Walker",
+    "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jonataswalker/eslint-config-jwalker/issues"
+    },
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint --config index.js .",
+        "lint:fix": "npm run lint -- --fix",
+        "commit": "git-cz",
+        "release": "release-it"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-array-func": "^3.1.7",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-no-unsanitized": "^3.1.5",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-security": "^1.4.0",
+        "eslint-plugin-sonarjs": "^0.10.0",
+        "eslint-plugin-unicorn": "^36.0.0"
+    },
+    "peerDependencies": {
+        "eslint": ">= 7",
+        "prettier": ">= 2"
+    },
+    "devDependencies": {
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^7.32.0",
+        "prettier": "^2.4.1"
     }
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.4",
-    "@typescript-eslint/parser": "^4.28.4",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-array-func": "^3.1.7",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-sonarjs": "^0.9.1",
-    "eslint-plugin-unicorn": "^34.0.1",
-    "prettier": "^2.3.2",
-    "typescript": "^4.3.5"
-  },
-  "peerDependencies": {
-    "eslint": ">= 7"
-  },
-  "devDependencies": {
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.31.0"
-  }
 }

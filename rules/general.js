@@ -10,6 +10,7 @@ module.exports = {
     'func-style': ['error', 'expression'],
     'line-comment-position': ['error', { position: 'above' }],
     'max-depth': ['error', 4],
+    'max-len': ['error', { code: 120, ignoreUrls: true }],
     'max-lines-per-function': 'error',
     'max-nested-callbacks': ['error', 4],
     'max-params': ['error', 3],
@@ -19,6 +20,8 @@ module.exports = {
     'no-inline-comments': 'error',
     'no-negated-condition': 'error',
     'no-underscore-dangle': 'off',
+    'object-curly-newline': ['error', { consistent: true }],
+    'object-curly-spacing': ['error', 'always'],
     'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: '*', next: 'return' },

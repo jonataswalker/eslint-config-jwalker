@@ -13,8 +13,12 @@ module.exports = {
     'import/first': 'error',
     'import/exports-last': 'error',
     'import/no-duplicates': 'error',
-    'import/group-exports': 'error',
     'import/prefer-default-export': 'off',
+    'import/group-exports': 'off',
+    'import/no-unused-modules': 'off',
+    'import/no-anonymous-default-export': 'off',
+    'import/max-dependencies': 'off',
+    'import/extensions': ['error', 'ignorePackages'],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/order': [
         'error',

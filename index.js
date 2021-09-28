@@ -8,9 +8,7 @@ const rules = { ...general, ...unicorn, ...bestPractices, ...importRules, ...pre
 
 module.exports = {
     env: {
-        node: true,
         es2021: true,
-        browser: true,
         'shared-node-browser': true,
     },
     parserOptions: {
@@ -22,6 +20,8 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'airbnb-base',
+        'airbnb-base/whitespace',
+        'plugin:no-unsanitized/DOM',
         'plugin:import/recommended',
         'plugin:promise/recommended',
         'plugin:array-func/recommended',
@@ -31,8 +31,3 @@ module.exports = {
         'plugin:prettier/recommended',
     ],
 };
-
-// plugins: ['@typescript-eslint', 'security', 'import', 'sonarjs'],
-// 'plugin:vue/vue3-recommended',
-// '@vue/typescript/recommended',
-// 'prettier/vue',
