@@ -43,4 +43,11 @@ module.exports = {
     ],
     'prefer-exponentiation-operator': 'error',
     'sort-vars': 'error',
+    'no-restricted-syntax': [
+        'error',
+        {
+            selector: 'SequenceExpression',
+            message: 'The comma operator is confusing and a common mistake. Don’t use it!',
+        },
+    ],
 };

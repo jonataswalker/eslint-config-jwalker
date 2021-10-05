@@ -15,10 +15,10 @@ module.exports = {
     'import/no-duplicates': 'error',
     'import/prefer-default-export': 'off',
     'import/group-exports': 'off',
-    'import/no-unused-modules': 'off',
+    'import/no-unused-modules': ['error', { missingExports: false, unusedExports: true }],
     'import/no-anonymous-default-export': 'off',
     'import/max-dependencies': 'off',
-    'import/extensions': ['error', 'ignorePackages'],
+    'import/extensions': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/order': [
         'error',

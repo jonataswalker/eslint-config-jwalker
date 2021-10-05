@@ -5,6 +5,9 @@
     "author": "Jonatas Walker",
     "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
     "main": "index.js",
+    "engines": {
+        "node": ">=12"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
@@ -25,12 +28,15 @@
         }
     },
     "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.33.0",
+        "@typescript-eslint/parser": "^4.33.0",
         "eslint-config-airbnb-base": "^14.2.1",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-array-func": "^3.1.7",
         "eslint-plugin-eslint-comments": "^3.2.0",
         "eslint-plugin-import": "^2.24.2",
         "eslint-plugin-no-unsanitized": "^3.1.5",
+        "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-promise": "^5.1.0",
         "eslint-plugin-security": "^1.4.0",
