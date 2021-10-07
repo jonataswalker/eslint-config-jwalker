@@ -2,9 +2,8 @@ const general = require('./rules/general');
 const unicorn = require('./rules/unicorn');
 const bestPractices = require('./rules/best-practices');
 const importRules = require('./rules/import');
-const prettier = require('./rules/prettier');
 
-const rules = { ...general, ...unicorn, ...bestPractices, ...importRules, ...prettier };
+const rules = { ...general, ...unicorn, ...bestPractices, ...importRules };
 
 module.exports = {
     env: {
@@ -46,6 +45,5 @@ module.exports = {
         'plugin:unicorn/recommended',
         'plugin:security/recommended',
         'plugin:node/recommended',
-        'plugin:prettier/recommended',
     ],
 };
