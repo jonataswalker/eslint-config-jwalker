@@ -1,12 +1,12 @@
 {
     "name": "eslint-config-jwalker",
-    "version": "6.4.0",
+    "version": "6.5.0",
     "description": "Shareable framework-agnostic ESLint config",
     "author": "Jonatas Walker",
     "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
     "main": "index.js",
     "engines": {
-        "node": ">=12"
+        "node": ">=14"
     },
     "repository": {
         "type": "git",

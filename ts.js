@@ -5,7 +5,6 @@ module.exports = {
             extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended', 'jwalker/ts-for-js'],
             plugins: ['import'],
             rules: {
-                'import/no-unused-modules': 'off',
                 '@typescript-eslint/no-magic-numbers': [
                     'error',
                     {

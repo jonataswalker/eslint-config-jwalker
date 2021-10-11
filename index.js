@@ -44,6 +44,5 @@ module.exports = {
         'plugin:sonarjs/recommended',
         'plugin:unicorn/recommended',
         'plugin:security/recommended',
-        'plugin:node/recommended',
     ],
 };
