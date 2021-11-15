@@ -11,7 +11,6 @@ module.exports = {
     'import/no-deprecated': 'error',
     'import/no-mutable-exports': 'error',
     'import/first': 'error',
-    'import/exports-last': 'error',
     'import/no-duplicates': 'error',
     'import/prefer-default-export': 'off',
     'import/group-exports': 'off',
@@ -19,6 +18,7 @@ module.exports = {
     'import/no-anonymous-default-export': 'off',
     'import/max-dependencies': 'off',
     'import/extensions': 'off',
+    'import/exports-last': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/order': [
         'error',
