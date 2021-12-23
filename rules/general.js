@@ -7,7 +7,6 @@ module.exports = {
     'prefer-const': 'error',
     'no-undefined': 'error',
     'func-names': 'off',
-    'func-style': ['error', 'expression'],
     'line-comment-position': ['error', { position: 'above' }],
     'max-depth': ['error', 4],
     'max-len': ['error', { code: 120, ignoreUrls: true }],
@@ -43,4 +42,20 @@ module.exports = {
     ],
     'prefer-exponentiation-operator': 'error',
     'sort-vars': 'error',
+    'no-restricted-syntax': [
+        'error',
+        {
+            selector: 'SequenceExpression',
+            message: 'The comma operator is confusing and a common mistake. Don’t use it!',
+        },
+    ],
+    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
+    'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
+    'no-param-reassign': [
+        'error',
+        {
+            props: true,
+            ignorePropertyModificationsFor: ['state'],
+        },
+    ],
 };

@@ -1,10 +1,13 @@
 {
     "name": "eslint-config-jwalker",
-    "version": "6.2.0",
+    "version": "7.0.2",
     "description": "Shareable framework-agnostic ESLint config",
     "author": "Jonatas Walker",
     "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
     "main": "index.js",
+    "engines": {
+        "node": ">=14"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
@@ -14,37 +17,33 @@
     },
     "license": "MIT",
     "scripts": {
-        "lint": "eslint --config index.js .",
+        "lint": "eslint .",
         "lint:fix": "npm run lint -- --fix",
-        "commit": "git-cz",
-        "release": "release-it"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
+        "prepare": "husky install"
     },
     "dependencies": {
-        "eslint-config-airbnb-base": "^14.2.1",
+        "@typescript-eslint/eslint-plugin": "^5.8.0",
+        "@typescript-eslint/parser": "^5.8.0",
+        "eslint-config-airbnb-base": "^15.0.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-array-func": "^3.1.7",
         "eslint-plugin-eslint-comments": "^3.2.0",
-        "eslint-plugin-import": "^2.24.2",
-        "eslint-plugin-no-unsanitized": "^3.1.5",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-no-unsanitized": "^4.0.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^6.0.0",
         "eslint-plugin-security": "^1.4.0",
-        "eslint-plugin-sonarjs": "^0.10.0",
-        "eslint-plugin-unicorn": "^36.0.0"
+        "eslint-plugin-sonarjs": "^0.11.0",
+        "eslint-plugin-unicorn": "^39.0.0"
     },
     "peerDependencies": {
-        "eslint": ">= 7",
+        "eslint": ">= 8",
         "prettier": ">= 2"
     },
     "devDependencies": {
-        "commitizen": "^4.2.4",
-        "cz-conventional-changelog": "^3.3.0",
-        "eslint": "^7.32.0",
-        "prettier": "^2.4.1"
+        "eslint": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.4",
+        "prettier": "^2.5.1"
     }
 }

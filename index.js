@@ -2,9 +2,8 @@ const general = require('./rules/general');
 const unicorn = require('./rules/unicorn');
 const bestPractices = require('./rules/best-practices');
 const importRules = require('./rules/import');
-const prettier = require('./rules/prettier');
 
-const rules = { ...general, ...unicorn, ...bestPractices, ...importRules, ...prettier };
+const rules = { ...general, ...unicorn, ...bestPractices, ...importRules };
 
 module.exports = {
     env: {
@@ -15,8 +14,24 @@ module.exports = {
         ecmaVersion: 2021,
         sourceType: 'module',
     },
+    reportUnusedDisableDirectives: true,
+    ignorePatterns: [
+        '!.*',
+        '.git/',
+        'node_modules/',
+        '.npm/',
+        'vendor/',
+        'lib-cov/',
+        'coverage/',
+        '.nyc_output/',
+        '.cache/',
+        'build/',
+        'dist/',
+        'tmp/',
+        '**/*.min.*',
+    ],
     rules,
-    plugins: ['security', 'import', 'sonarjs'],
+    plugins: ['promise', 'security', 'import', 'sonarjs'],
     extends: [
         'eslint:recommended',
         'airbnb-base',
@@ -28,6 +43,6 @@ module.exports = {
         'plugin:eslint-comments/recommended',
         'plugin:sonarjs/recommended',
         'plugin:unicorn/recommended',
-        'plugin:prettier/recommended',
+        'plugin:security/recommended',
     ],
 };
