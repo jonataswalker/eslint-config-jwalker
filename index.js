@@ -31,7 +31,7 @@ module.exports = {
         '**/*.min.*',
     ],
     rules,
-    plugins: ['security', 'import', 'sonarjs'],
+    plugins: ['promise', 'security', 'import', 'sonarjs'],
     extends: [
         'eslint:recommended',
         'airbnb-base',
