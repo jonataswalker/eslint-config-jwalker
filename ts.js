@@ -2,7 +2,12 @@ module.exports = {
     overrides: [
         {
             files: ['*.ts', '*.tsx'],
-            extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended', 'jwalker/ts-for-js'],
+            extends: [
+                'airbnb-typescript',
+                'plugin:import/typescript',
+                'plugin:@typescript-eslint/recommended',
+                'jwalker/ts-for-js',
+            ],
             plugins: ['import'],
             rules: {
                 '@typescript-eslint/no-magic-numbers': [
