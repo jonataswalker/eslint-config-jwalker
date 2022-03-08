@@ -18,7 +18,17 @@ module.exports = {
     'import/no-useless-path-segments': 'error',
     'import/no-named-as-default-member': 'error',
     'import/no-unused-modules': ['error', { missingExports: false, unusedExports: true }],
-    'import/extensions': ['error', 'always', { ignorePackages: true }],
+    'import/extensions': [
+        'error',
+        'always',
+        {
+            ignorePackages: true,
+            pattern: {
+                ts: 'never',
+                tsx: 'never',
+            },
+        },
+    ],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/order': [
         'error',
