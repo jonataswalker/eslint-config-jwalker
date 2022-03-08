@@ -3,8 +3,8 @@ module.exports = {
         {
             files: ['*.ts', '*.tsx'],
             extends: [
-                'airbnb-typescript',
                 'plugin:import/typescript',
+                'airbnb-typescript/base',
                 'plugin:@typescript-eslint/recommended',
                 'jwalker/ts-for-js',
             ],
@@ -55,6 +55,9 @@ module.exports = {
             settings: {
                 node: {
                     tryExtensions: ['.mjs', '.cjs', '.js', '.json', '.node', '.ts', '.d.ts'],
+                },
+                'import/parsers': {
+                    '@typescript-eslint/parser': ['.ts', '.tsx'],
                 },
             },
         },
