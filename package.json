@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-jwalker",
-    "version": "7.2.2",
+    "version": "7.3.0",
     "description": "Shareable framework-agnostic ESLint config",
     "author": "Jonatas Walker",
     "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
@@ -27,6 +27,7 @@
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-config-airbnb-typescript": "^16.1.0",
         "eslint-config-prettier": "^8.5.0",
+        "eslint-import-resolver-alias": "^1.1.2",
         "eslint-import-resolver-typescript": "^2.5.0",
         "eslint-plugin-array-func": "^3.1.7",
         "eslint-plugin-eslint-comments": "^3.2.0",
