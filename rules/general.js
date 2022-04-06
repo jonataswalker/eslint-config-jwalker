@@ -2,23 +2,26 @@ const cjsExport = 'cjs-export';
 const cjsImport = 'cjs-import';
 
 module.exports = {
-    'max-classes-per-file': 'error',
-    'no-duplicate-imports': 'error',
+    'func-names': 'off',
+    'no-process-exit': 'off',
+    'no-underscore-dangle': 'off',
+    'max-lines-per-function': 'off',
+    'new-cap': 'error',
+    'sort-vars': 'error',
     'prefer-const': 'error',
     'no-undefined': 'error',
-    'func-names': 'off',
+    'no-inline-comments': 'error',
+    'max-classes-per-file': 'error',
+    'no-negated-condition': 'error',
+    'no-duplicate-imports': 'error',
+    'prefer-exponentiation-operator': 'error',
     'line-comment-position': ['error', { position: 'above' }],
     'max-depth': ['error', 4],
     'max-len': ['error', { code: 120, ignoreUrls: true }],
-    'max-lines-per-function': 'error',
     'max-nested-callbacks': ['error', 4],
     'max-params': ['error', 3],
     'max-statements': ['error', 25],
     'max-statements-per-line': ['error', { max: 1 }],
-    'new-cap': 'error',
-    'no-inline-comments': 'error',
-    'no-negated-condition': 'error',
-    'no-underscore-dangle': 'off',
     'object-curly-newline': ['error', { consistent: true }],
     'object-curly-spacing': ['error', 'always'],
     'padding-line-between-statements': [
@@ -40,8 +43,6 @@ module.exports = {
         { blankLine: 'any', prev: cjsImport, next: '*' },
         { blankLine: 'any', prev: cjsImport, next: cjsImport },
     ],
-    'prefer-exponentiation-operator': 'error',
-    'sort-vars': 'error',
     'no-restricted-syntax': [
         'error',
         {

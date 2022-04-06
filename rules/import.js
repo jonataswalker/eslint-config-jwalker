@@ -3,6 +3,7 @@ module.exports = {
     'import/group-exports': 'off',
     'import/no-absolute-path': 'off',
     'import/max-dependencies': 'off',
+    'import/no-unused-modules': 'off',
     'import/prefer-default-export': 'off',
     'import/no-anonymous-default-export': 'off',
     'import/named': 'error',
@@ -17,7 +18,7 @@ module.exports = {
     'import/no-named-as-default': 'error',
     'import/no-useless-path-segments': 'error',
     'import/no-named-as-default-member': 'error',
-    'import/no-unused-modules': ['error', { missingExports: false, unusedExports: true }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/extensions': [
         'error',
         'always',
@@ -29,7 +30,6 @@ module.exports = {
             },
         },
     ],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/order': [
         'error',
         {
