@@ -10,6 +10,11 @@ module.exports = {
             ],
             plugins: ['import'],
             rules: {
+                '@typescript-eslint/no-type-alias': 'off',
+                '@typescript-eslint/member-ordering': 'off',
+                '@typescript-eslint/no-restricted-imports': 'off',
+                '@typescript-eslint/explicit-function-return-type': 'off',
+                '@typescript-eslint/explicit-module-boundary-types': 'off',
                 '@typescript-eslint/no-magic-numbers': [
                     'error',
                     {
@@ -37,11 +42,6 @@ module.exports = {
                         allow: ['defaultStatus', 'event', 'find', 'length', 'name', 'status'],
                     },
                 ],
-                '@typescript-eslint/member-ordering': 'off',
-                '@typescript-eslint/no-type-alias': 'off',
-                '@typescript-eslint/explicit-module-boundary-types': 'off',
-                '@typescript-eslint/explicit-function-return-type': 'off',
-                '@typescript-eslint/no-restricted-imports': 'off',
                 '@typescript-eslint/prefer-readonly-parameter-types': ['error', { ignoreInferredTypes: true }],
                 '@typescript-eslint/no-use-before-define': ['error', { ignoreTypeReferences: false }],
                 '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
