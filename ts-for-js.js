@@ -18,36 +18,19 @@ module.exports = {
         '@typescript-eslint/ban-tslint-comment': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-extraneous-class': 'error',
-        '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/promise-function-async': 'error',
         '@typescript-eslint/require-array-sort-compare': 'error',
         '@typescript-eslint/no-confusing-void-expression': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-        '@typescript-eslint/return-await': ['error', 'always'],
         'no-void': ['error', { allowAsStatement: true }],
 
         '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
             'error',
             { allowComparingNullableBooleansToTrue: false },
         ],
-
-        '@typescript-eslint/restrict-template-expressions': [
-            'error',
-            {
-                allowNumber: true,
-                allowBoolean: false,
-                allowAny: true,
-                allowNullish: false,
-            },
-        ],
-
         '@typescript-eslint/naming-convention': [
             'error',
-            {
-                selector: 'default',
-                format: ['strictCamelCase'],
-            },
             {
                 selector: 'function',
                 format: ['strictCamelCase', 'StrictPascalCase'],
