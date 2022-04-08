@@ -1,11 +1,4 @@
 module.exports = {
-    'import/exports-last': 'off',
-    'import/group-exports': 'off',
-    'import/no-absolute-path': 'off',
-    'import/max-dependencies': 'off',
-    'import/no-unused-modules': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-anonymous-default-export': 'off',
     'import/named': 'error',
     'import/first': 'error',
     'import/export': 'error',

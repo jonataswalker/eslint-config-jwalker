@@ -2,8 +2,6 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     rules: {
-        'require-await': 'off',
-        'no-return-await': 'off',
         '@typescript-eslint/no-this-alias': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
         '@typescript-eslint/require-await': 'error',

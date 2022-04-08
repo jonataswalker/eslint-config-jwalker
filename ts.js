@@ -10,11 +10,6 @@ module.exports = {
             ],
             plugins: ['import'],
             rules: {
-                '@typescript-eslint/no-type-alias': 'off',
-                '@typescript-eslint/member-ordering': 'off',
-                '@typescript-eslint/no-restricted-imports': 'off',
-                '@typescript-eslint/explicit-function-return-type': 'off',
-                '@typescript-eslint/explicit-module-boundary-types': 'off',
                 '@typescript-eslint/no-magic-numbers': [
                     'error',
                     {
