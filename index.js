@@ -2,8 +2,9 @@ const general = require('./rules/general.js');
 const unicorn = require('./rules/unicorn.js');
 const bestPractices = require('./rules/best-practices.js');
 const importRules = require('./rules/import.js');
+const disabledRules = require('./rules/disabled.js');
 
-const rules = { ...general, ...unicorn, ...bestPractices, ...importRules };
+const rules = { ...general, ...unicorn, ...bestPractices, ...importRules, ...disabledRules };
 
 /** @type {import('@typescript-eslint/utils').TSESLint.Linter.Config} */
 module.exports = {

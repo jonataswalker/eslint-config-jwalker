@@ -2,10 +2,6 @@ const cjsExport = 'cjs-export';
 const cjsImport = 'cjs-import';
 
 module.exports = {
-    'func-names': 'off',
-    'no-process-exit': 'off',
-    'no-underscore-dangle': 'off',
-    'max-lines-per-function': 'off',
     'new-cap': 'error',
     'sort-vars': 'error',
     'prefer-const': 'error',
