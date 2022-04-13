@@ -23,9 +23,12 @@ module.exports = {
     'unicorn/prefer-spread': 'off',
     'unicorn/prefer-module': 'off',
     'unicorn/no-process-exit': 'off',
+    'unicorn/no-array-reduce': 'off',
     'unicorn/no-array-for-each': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-unused-properties': 'off',
+    'unicorn/prefer-query-selector': 'off',
+    'unicorn/prefer-dom-node-remove': 'off',
 
     '@typescript-eslint/return-await': 'off',
     '@typescript-eslint/no-type-alias': 'off',
@@ -34,4 +37,5 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
 };

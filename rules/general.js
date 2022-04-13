@@ -2,24 +2,29 @@ const cjsExport = 'cjs-export';
 const cjsImport = 'cjs-import';
 
 module.exports = {
-    'new-cap': 'error',
     'sort-vars': 'error',
-    'prefer-const': 'error',
     'no-undefined': 'error',
+    'prefer-const': 'error',
     'no-inline-comments': 'error',
     'max-classes-per-file': 'error',
     'no-negated-condition': 'error',
     'no-duplicate-imports': 'error',
     'prefer-exponentiation-operator': 'error',
-    'line-comment-position': ['error', { position: 'above' }],
     'max-depth': ['error', 4],
-    'max-len': ['error', { code: 120, ignoreUrls: true }],
-    'max-nested-callbacks': ['error', 4],
     'max-params': ['error', 3],
     'max-statements': ['error', 25],
-    'max-statements-per-line': ['error', { max: 1 }],
-    'object-curly-newline': ['error', { consistent: true }],
+    'max-nested-callbacks': ['error', 4],
     'object-curly-spacing': ['error', 'always'],
+    'new-cap': ['error', { properties: false }],
+    'max-statements-per-line': ['error', { max: 1 }],
+    'max-len': ['error', { code: 120, ignoreUrls: true }],
+    'object-curly-newline': ['error', { consistent: true }],
+    'line-comment-position': ['error', { position: 'above' }],
+    'prefer-destructuring': ['error', { object: true, array: false }],
+    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
+    'class-methods-use-this': ['error', { enforceForClassFields: false }],
+    'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
+    'no-shadow': ['error', { builtinGlobals: true, allow: ['resolve', 'reject', 'done', 'task'] }],
     'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: '*', next: 'return' },
@@ -44,15 +49,6 @@ module.exports = {
         {
             selector: 'SequenceExpression',
             message: 'The comma operator is confusing and a common mistake. Don’t use it!',
-        },
-    ],
-    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
-    'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
-    'no-param-reassign': [
-        'error',
-        {
-            props: true,
-            ignorePropertyModificationsFor: ['state'],
         },
     ],
 };
