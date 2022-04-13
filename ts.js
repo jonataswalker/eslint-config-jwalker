@@ -18,8 +18,11 @@ module.exports = {
                         ignoreDefaultValues: true,
                     },
                 ],
-
-                '@typescript-eslint/no-unused-expressions': ['error', { enforceForJSX: true }],
+                'no-unused-expressions': 'off',
+                '@typescript-eslint/no-unused-expressions': [
+                    'error',
+                    { enforceForJSX: true, allowShortCircuit: true, allowTernary: true },
+                ],
                 '@typescript-eslint/no-unused-vars': [
                     'error',
                     {
@@ -34,7 +37,17 @@ module.exports = {
                     'error',
                     {
                         builtinGlobals: true,
-                        allow: ['defaultStatus', 'event', 'find', 'length', 'name', 'status'],
+                        allow: [
+                            'defaultStatus',
+                            'event',
+                            'find',
+                            'length',
+                            'name',
+                            'status',
+                            'resolve',
+                            'reject',
+                            'done',
+                        ],
                     },
                 ],
                 '@typescript-eslint/prefer-readonly-parameter-types': ['error', { ignoreInferredTypes: true }],

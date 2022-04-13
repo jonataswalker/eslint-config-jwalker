@@ -10,6 +10,8 @@ module.exports = {
                 Props: true,
                 req: true,
                 res: true,
+                evt: true,
+                pkg: true,
             },
             ignore: ['\\.e2e$', '\\.e2e-spec$'],
             checkShorthandProperties: true,

@@ -24,11 +24,6 @@ module.exports = {
         '@typescript-eslint/no-confusing-void-expression': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
         'no-void': ['error', { allowAsStatement: true }],
-
-        '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
-            'error',
-            { allowComparingNullableBooleansToTrue: false },
-        ],
         '@typescript-eslint/naming-convention': [
             'error',
             {
