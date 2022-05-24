@@ -15,7 +15,7 @@ module.exports = {
     'max-statements': ['error', 25],
     'max-nested-callbacks': ['error', 4],
     'object-curly-spacing': ['error', 'always'],
-    'new-cap': ['error', { properties: false }],
+    'new-cap': ['error', { capIsNew: false, properties: false }],
     'max-statements-per-line': ['error', { max: 1 }],
     'max-len': ['error', { code: 120, ignoreUrls: true }],
     'object-curly-newline': ['error', { consistent: true }],
@@ -24,7 +24,7 @@ module.exports = {
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
     'class-methods-use-this': ['error', { enforceForClassFields: false }],
     'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
-    'no-shadow': ['error', { builtinGlobals: true, allow: ['resolve', 'reject', 'done', 'task'] }],
+    'no-shadow': ['error', { builtinGlobals: false, allow: ['resolve', 'reject', 'done', 'task'] }],
     'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: '*', next: 'return' },
