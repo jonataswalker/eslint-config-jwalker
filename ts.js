@@ -61,9 +61,6 @@ module.exports = {
             },
 
             settings: {
-                node: {
-                    tryExtensions: ['.mjs', '.cjs', '.js', '.json', '.node', '.ts', '.d.ts'],
-                },
                 'import/parsers': {
                     '@typescript-eslint/parser': ['.ts', '.tsx'],
                 },
