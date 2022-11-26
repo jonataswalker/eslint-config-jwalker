@@ -22,33 +22,33 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.30.7",
-        "@typescript-eslint/parser": "^5.30.7",
+        "@typescript-eslint/eslint-plugin": "^5.44.0",
+        "@typescript-eslint/parser": "^5.44.0",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-config-airbnb-typescript": "^17.0.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-import-resolver-alias": "^1.1.2",
-        "eslint-import-resolver-typescript": "^3.2.7",
+        "eslint-import-resolver-typescript": "^3.5.2",
         "eslint-plugin-anti-trojan-source": "^1.1.0",
         "eslint-plugin-array-func": "^3.1.7",
         "eslint-plugin-eslint-comments": "^3.2.0",
         "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-n": "^15.2.4",
-        "eslint-plugin-no-unsanitized": "^4.0.1",
-        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-n": "^15.5.1",
+        "eslint-plugin-no-unsanitized": "^4.0.2",
+        "eslint-plugin-promise": "^6.1.1",
         "eslint-plugin-security": "^1.5.0",
-        "eslint-plugin-sonarjs": "^0.13.0",
-        "eslint-plugin-unicorn": "^43.0.2"
+        "eslint-plugin-sonarjs": "^0.16.0",
+        "eslint-plugin-unicorn": "^45.0.0"
     },
     "peerDependencies": {
         "eslint": ">= 8",
         "prettier": ">= 2"
     },
     "devDependencies": {
-        "eslint": "^8.20.0",
+        "eslint": "^8.28.0",
         "eslint-plugin-prettier": "^4.2.1",
-        "husky": "^8.0.1",
-        "prettier": "^2.7.1"
+        "husky": "^8.0.2",
+        "prettier": "^2.8.0"
     },
     "overrides": {
         "glob-parent": "6.0.2"
