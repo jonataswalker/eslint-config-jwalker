@@ -4,6 +4,7 @@ module.exports = {
     'no-return-await': 'off',
     'no-process-exit': 'off',
     'no-underscore-dangle': 'off',
+    'class-methods-use-this': 'off',
     'max-lines-per-function': 'off',
 
     'promise/always-return': 'off',
@@ -13,7 +14,6 @@ module.exports = {
     'import/group-exports': 'off',
     'import/no-absolute-path': 'off',
     'import/max-dependencies': 'off',
-    'import/no-unused-modules': 'off',
     'import/prefer-default-export': 'off',
     'import/no-anonymous-default-export': 'off',
 
@@ -27,15 +27,21 @@ module.exports = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-unused-properties': 'off',
+    'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prefer-dom-node-remove': 'off',
+    'unicorn/prefer-dom-node-append': 'off',
 
     '@typescript-eslint/return-await': 'off',
     '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/member-ordering': 'off',
+    '@typescript-eslint/no-magic-numbers': 'off',
+    '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-restricted-imports': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
 };

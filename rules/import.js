@@ -1,4 +1,6 @@
 module.exports = {
+    'import/no-unused-modules': 'warn',
+
     'import/named': 'error',
     'import/first': 'error',
     'import/export': 'error',
@@ -17,10 +19,7 @@ module.exports = {
         'always',
         {
             ignorePackages: true,
-            pattern: {
-                ts: 'never',
-                tsx: 'never',
-            },
+            pattern: { ts: 'never', tsx: 'never' },
         },
     ],
     'import/order': [
