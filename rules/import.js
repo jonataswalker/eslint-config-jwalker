@@ -1,6 +1,4 @@
 module.exports = {
-    'import/no-unused-modules': 'warn',
-
     'import/named': 'error',
     'import/first': 'error',
     'import/export': 'error',
