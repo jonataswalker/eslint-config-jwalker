@@ -17,10 +17,7 @@ module.exports = {
         'always',
         {
             ignorePackages: true,
-            pattern: {
-                ts: 'never',
-                tsx: 'never',
-            },
+            pattern: { ts: 'never', tsx: 'never' },
         },
     ],
     'import/order': [

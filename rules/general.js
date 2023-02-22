@@ -22,7 +22,6 @@ module.exports = {
     'line-comment-position': ['error', { position: 'above' }],
     'prefer-destructuring': ['error', { object: true, array: false }],
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
-    'class-methods-use-this': ['error', { enforceForClassFields: false }],
     'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
     'no-shadow': ['error', { builtinGlobals: false, allow: ['resolve', 'reject', 'done', 'task'] }],
     'padding-line-between-statements': [

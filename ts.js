@@ -10,14 +10,6 @@ module.exports = {
             ],
             plugins: ['import'],
             rules: {
-                '@typescript-eslint/no-magic-numbers': [
-                    'error',
-                    {
-                        ignore: [0, 1],
-                        enforceConst: true,
-                        ignoreDefaultValues: true,
-                    },
-                ],
                 'no-unused-expressions': 'off',
                 '@typescript-eslint/no-unused-expressions': [
                     'error',
@@ -50,14 +42,10 @@ module.exports = {
                         ],
                     },
                 ],
-                '@typescript-eslint/prefer-readonly-parameter-types': ['error', { ignoreInferredTypes: true }],
-                '@typescript-eslint/no-use-before-define': ['error', { ignoreTypeReferences: false }],
                 '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
                 '@typescript-eslint/no-meaningless-void-operator': ['error', { checkNever: true }],
                 '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
                 'import/extensions': ['error', 'never'],
-                'import/no-unused-modules': ['error', { missingExports: false, unusedExports: true }],
-                'import/max-dependencies': ['error', { ignoreTypeImports: true }],
             },
 
             settings: {

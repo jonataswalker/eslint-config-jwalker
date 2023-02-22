@@ -24,30 +24,5 @@ module.exports = {
         '@typescript-eslint/no-confusing-void-expression': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
         'no-void': ['error', { allowAsStatement: true }],
-        '@typescript-eslint/naming-convention': [
-            'error',
-            {
-                selector: 'function',
-                format: ['strictCamelCase', 'StrictPascalCase'],
-            },
-            {
-                selector: ['typeLike', 'enumMember'],
-                format: ['StrictPascalCase'],
-            },
-            {
-                selector: ['variable', 'parameter', 'property', 'accessor'],
-                types: ['boolean'],
-                format: ['PascalCase'],
-                prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will'],
-            },
-            {
-                selector: 'property',
-                format: null,
-                filter: {
-                    regex: '^(logger|exposeHeadRoutes|useUnifiedTopology|prettyPrint|success)$',
-                    match: true,
-                },
-            },
-        ],
     },
 };
