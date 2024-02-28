@@ -18,9 +18,12 @@
     "index.d.ts",
     "index.js"
   ],
+  "keywords": [
+    "eslint-config"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
+    "url": "git+https://github.com/jonataswalker/eslint-config-jwalker.git"
   },
   "bugs": {
     "url": "https://github.com/jonataswalker/eslint-config-jwalker/issues"
@@ -33,7 +36,7 @@
     "view:config": "eslint-flat-config-viewer",
     "gen:types": "tsc",
     "prepare": "husky",
-    "release": "release-it"
+    "release": "release-it --no-npm.publish"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.0.2",
