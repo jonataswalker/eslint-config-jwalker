@@ -1,50 +1,5 @@
-const general = require('./rules/general.js');
-const unicorn = require('./rules/unicorn.js');
-const bestPractices = require('./rules/best-practices.js');
-const importRules = require('./rules/import.js');
-const disabledRules = require('./rules/disabled.js');
+export { default as common } from './conf/common.js'
 
-const rules = { ...general, ...unicorn, ...bestPractices, ...importRules, ...disabledRules };
+export { default as node } from './conf/node.js'
 
-/** @type {import('@typescript-eslint/utils').TSESLint.Linter.Config} */
-module.exports = {
-    env: {
-        es2022: true,
-        'shared-node-browser': true,
-    },
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-    },
-    reportUnusedDisableDirectives: true,
-    ignorePatterns: [
-        '!.*',
-        '.git/',
-        'node_modules/',
-        '.npm/',
-        'vendor/',
-        'lib-cov/',
-        'coverage/',
-        '.nyc_output/',
-        '.cache/',
-        'build/',
-        'dist/',
-        'tmp/',
-        '**/*.min.*',
-    ],
-    rules,
-    plugins: ['promise', 'security', 'import', 'sonarjs'],
-    extends: [
-        'eslint:recommended',
-        'airbnb-base',
-        'airbnb-base/whitespace',
-        'plugin:no-unsanitized/DOM',
-        'plugin:promise/recommended',
-        'plugin:array-func/all',
-        'plugin:eslint-comments/recommended',
-        'plugin:anti-trojan-source/recommended',
-        'plugin:sonarjs/recommended',
-        'plugin:unicorn/recommended',
-        'plugin:security/recommended',
-    ],
-};
+export { default as typescript } from './conf/typescript.js'
