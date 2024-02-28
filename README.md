@@ -1,11 +1,38 @@
 # eslint-config-jwalker
-Shareable ESLint config
 
+Shareable ESLint config
 
 ## Install
 
 ```sh
-npm i --save-dev eslint-config-jwalker
+# flat config
+npm i -D eslint-config-jwalker
+
+# classic config
+npm i -D eslint-config-jwalker@8
+```
+
+## Usage - Flat Config
+
+```javascript
+import tsParser from '@typescript-eslint/parser'
+import dwEslintConfig from '@deepwaterv2/eslint-config'
+
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [
+    ...dwEslintConfig,
+    { ignores: ['types/*', 'scripts/*', '**/*.d.ts'] },
+    {
+        languageOptions: {
+            parser: tsParser,
+            parserOptions: {
+                ecmaVersion: 'latest',
+                sourceType: 'module',
+                project: ['./tsconfig.eslint.json'],
+            },
+        },
+    },
+]
 ```
 
 
@@ -20,11 +47,11 @@ Add this to your `.eslintrc` file (or `package.json`):
 
 ```json
 {
-  "extends": "jwalker"
+    "extends": "jwalker"
 }
 ```
 
-*Note: We omitted the `eslint-config-` prefix since it is automatically assumed by ESLint.*
+_Note: We omitted the `eslint-config-` prefix since it is automatically assumed by ESLint._
 
 You can override settings from the shareable config by adding them directly into your
 `.eslintrc` file.
