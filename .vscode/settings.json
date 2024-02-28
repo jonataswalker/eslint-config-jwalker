@@ -1,9 +1,9 @@
 {
     "editor.rulers": [100, 120],
     "editor.formatOnPaste": false,
+    "editor.guides.bracketPairs": true,
     "eslint.experimental.useFlatConfig": true,
     "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
     "typescript.tsdk": "node_modules/typescript/lib",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "search.exclude": {

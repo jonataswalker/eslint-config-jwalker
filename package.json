@@ -1,69 +1,76 @@
 {
-    "name": "eslint-config-jwalker",
-    "version": "10.0.0-7",
-    "description": "Shareable framework-agnostic ESLint config",
-    "author": "Jonatas Walker",
-    "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
-    "type": "module",
-    "engines": {
-        "node": ">=18"
-    },
-    "exports": {
-        "./package.json": "./package.json",
-        ".": "./index.js"
-    },
-    "types": "./index.d.ts",
-    "files": [
-        "conf",
-        "index.d.ts",
-        "index.js"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
-    },
-    "bugs": {
-        "url": "https://github.com/jonataswalker/eslint-config-jwalker/issues"
-    },
-    "license": "MIT",
-    "scripts": {
-        "lint": "eslint .",
-        "lint:fix": "npm run lint -- --fix",
-        "config": "eslint --print-config index.js",
-        "view:config": "eslint-flat-config-viewer",
-        "gen:types": "tsc",
-        "prepare": "husky"
-    },
-    "dependencies": {
-        "@eslint/eslintrc": "^3.0.2",
-        "@eslint/js": "^8.57.0",
-        "@stylistic/eslint-plugin": "^1.6.2",
-        "eslint": "^8.57.0",
-        "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-config-airbnb-typescript": "^17.1.0",
-        "eslint-config-flat-gitignore": "^0.1.3",
-        "eslint-plugin-array-func": "^5.0.1",
-        "eslint-plugin-eslint-comments": "^3.2.0",
-        "eslint-plugin-import": "npm:eslint-plugin-i@^2.29.1",
-        "eslint-plugin-jsdoc": "^48.2.0",
-        "eslint-plugin-n": "^16.6.2",
-        "eslint-plugin-promise": "^6.1.1",
-        "eslint-plugin-security": "^2.1.1",
-        "eslint-plugin-sonarjs": "^0.24.0",
-        "eslint-plugin-unicorn": "^51.0.1",
-        "globals": "^14.0.0",
-        "typescript-eslint": "^7.1.0"
-    },
-    "devDependencies": {
-        "@types/node": "^20.11.21",
-        "eslint-flat-config-viewer": "^0.1.11",
-        "husky": "^9.0.11",
-        "typescript": "^5.3.3"
-    },
-    "overrides": {
-        "eslint-config-airbnb-typescript": {
-            "@typescript-eslint/eslint-plugin": "7.x",
-            "@typescript-eslint/parser": "7.x"
-        }
+  "name": "eslint-config-jwalker",
+  "version": "10.0.0-7",
+  "description": "Shareable framework-agnostic ESLint config",
+  "author": "Jonatas Walker",
+  "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./index.js"
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "conf",
+    "index.d.ts",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonataswalker/eslint-config-jwalker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonataswalker/eslint-config-jwalker/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "config": "eslint --print-config index.js",
+    "view:config": "eslint-flat-config-viewer",
+    "gen:types": "tsc",
+    "prepare": "husky",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^8.57.0",
+    "@stylistic/eslint-plugin": "^1.6.2",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-flat-gitignore": "^0.1.3",
+    "eslint-plugin-array-func": "^5.0.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "npm:eslint-plugin-i@^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-security": "^2.1.1",
+    "eslint-plugin-sonarjs": "^0.24.0",
+    "eslint-plugin-unicorn": "^51.0.1",
+    "globals": "^14.0.0",
+    "typescript-eslint": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.21",
+    "eslint-flat-config-viewer": "^0.1.11",
+    "husky": "^9.0.11",
+    "release-it": "^17.1.1",
+    "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "eslint-config-airbnb-typescript": {
+      "@typescript-eslint/eslint-plugin": "7.x",
+      "@typescript-eslint/parser": "7.x"
     }
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  }
 }
