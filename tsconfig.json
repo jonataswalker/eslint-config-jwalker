@@ -10,5 +10,5 @@
         "emitDeclarationOnly": true,
         "allowSyntheticDefaultImports": true
     },
-    "include": ["./index.js"]
+    "include": ["config/index.js"]
 }
