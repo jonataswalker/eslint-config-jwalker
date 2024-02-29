@@ -3,7 +3,7 @@ import pluginJsonc from 'eslint-plugin-jsonc'
 
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from './constants.js'
 
-/** @type {import('typescript-eslint').Config} */
+/** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
     {
         // @ts-ignore
