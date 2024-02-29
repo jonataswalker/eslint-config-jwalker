@@ -1,19 +1,31 @@
 import node from 'eslint-plugin-n'
-import pluginSecurity from 'eslint-plugin-security'
-import globals from 'globals'
+import security from 'eslint-plugin-security'
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
-    node.configs['flat/recommended'],
-    pluginSecurity.configs.recommended,
     {
-        languageOptions: {
-            globals: {
-                ...globals.node,
-                NodeJS: 'readonly',
-            },
-        },
+        // @ts-ignore
+        name: 'node:recommended',
+        plugins: { n: node },
+
         rules: {
+            ...node.configs['flat/recommended'].rules,
+        },
+    },
+    {
+        // @ts-ignore
+        name: 'security:recommended',
+        plugins: { security },
+
+        rules: {
+            ...security.configs.recommended.rules,
+        },
+    },
+    {
+        // @ts-ignore
+        name: 'jwalker:node',
+        rules: {
+            'security/detect-object-injection': 'off',
             'n/file-extension-in-import': ['error', 'always'],
             'n/prefer-promises/dns': 'error',
             'n/prefer-promises/fs': 'error',

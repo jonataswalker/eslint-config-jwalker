@@ -1,41 +1,48 @@
-import tseslint from 'typescript-eslint'
+import { config, parser, plugin } from 'typescript-eslint'
+
+import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from './constants.js'
+import { tsDisableTypeCheckedRules, tsRecommendedTypeCheckedRules, tsStrictTypeCheckedRules } from './utils.js'
 
 /** @type {import('typescript-eslint').Config} */
-export default tseslint.config(
-    ...tseslint.configs.recommendedTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
+export default config(
     {
-        files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
+        // @ts-ignore
+        name: 'jwalker:ts:recommended-type-checked + strict-type-checked + custom',
+        files: [GLOB_TS, GLOB_TSX],
+        plugins: { '@typescript-eslint': plugin },
+
         languageOptions: {
-            parser: tseslint.parser,
+            parser,
             parserOptions: {
                 ecmaVersion: 'latest',
                 project: ['./tsconfig.json', './tsconfig.eslint.json'],
             },
         },
+
         rules: {
+            ...tsRecommendedTypeCheckedRules,
+            ...tsStrictTypeCheckedRules,
+
             'no-shadow': 'off',
+            'jsdoc/require-jsdoc': 'off',
             'no-use-before-define': 'off',
             'no-unused-expressions': 'off',
 
             '@typescript-eslint/no-shadow': 'error',
+            '@typescript-eslint/no-import-type-side-effects': 'error',
             '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+            '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
+            '@typescript-eslint/no-use-before-define': ['error', { classes: false, functions: false, variables: true }],
+            '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: false, prefer: 'type-imports' }],
             '@typescript-eslint/no-unused-expressions': [
                 'error',
                 { enforceForJSX: true, allowShortCircuit: true, allowTernary: true },
             ],
 
-            'jsdoc/require-jsdoc': 'off',
-        },
-    },
-    {
-        files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts', '**/*.js', '**/*.jsx'],
-        rules: {
             '@typescript-eslint/no-this-alias': 'error',
             '@typescript-eslint/prefer-for-of': 'error',
             '@typescript-eslint/require-await': 'error',
             '@typescript-eslint/await-thenable': 'error',
-            '@typescript-eslint/ban-ts-comment': 'error',
             '@typescript-eslint/no-misused-new': 'error',
             '@typescript-eslint/unbound-method': 'error',
             '@typescript-eslint/no-for-in-array': 'error',
@@ -52,11 +59,26 @@ export default tseslint.config(
             '@typescript-eslint/require-array-sort-compare': 'error',
             '@typescript-eslint/no-confusing-void-expression': 'error',
             '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+
+        },
+    },
+
+    {
+        // disable type-aware linting on JS files
+        name: 'jwalker:ts:disable-type-checked',
+        files: [GLOB_JS, GLOB_JSX, '**/*.d.ts'],
+        rules: {
+            ...tsDisableTypeCheckedRules,
         },
     },
     {
-        // disable type-aware linting on JS files
-        files: ['**/*.js'],
-        ...tseslint.configs.disableTypeChecked,
+        files: ['**/*.d.ts'],
+        // @ts-ignore
+        name: 'jwalker:ts:dts-overrides',
+        rules: {
+            'eslint-comments/no-unlimited-disable': 'off',
+            'import/no-duplicates': 'off',
+            'no-restricted-syntax': 'off',
+        },
     },
 )

@@ -5,6 +5,8 @@
     "eslint.experimental.useFlatConfig": true,
     "editor.bracketPairColorization.enabled": true,
     "typescript.tsdk": "node_modules/typescript/lib",
+    "javascript.preferences.importModuleSpecifierEnding": "js",
+    "javascript.preferences.importModuleSpecifier": "project-relative",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "search.exclude": {
         "**/node_modules": true,

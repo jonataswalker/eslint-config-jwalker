@@ -26,3 +26,7 @@ export default [
     },
 ]
 ```
+
+## Presets + Custom Rules
+
+![Screenshot](ESLint-Flat-Config-Viewer.png)
