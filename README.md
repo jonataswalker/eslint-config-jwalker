@@ -13,7 +13,7 @@ npm i -D eslint-config-jwalker
 ```javascript
 import { common, typescript, node } from 'eslint-config-jwalker'
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
     ...common,
     ...node,
@@ -21,7 +21,7 @@ export default [
     {
         rules: {
             // override?
-            'import/extensions': 'off',
+            'import-x/extensions': 'off',
         },
     },
 ]

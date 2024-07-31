@@ -1,9 +1,7 @@
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
     {
-        // @ts-ignore
         name: 'jwalker:disabled',
-
         rules: {
             'func-names': 'off',
             'no-process-exit': 'off',

@@ -1,7 +1,7 @@
 import node from 'eslint-plugin-n'
 import security from 'eslint-plugin-security'
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
     {
         // @ts-ignore

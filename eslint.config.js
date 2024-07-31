@@ -1,6 +1,6 @@
 import { common, jsonc, node, typescript } from './config/index.js'
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config} */
 export default [
     ...common,
     ...node,
@@ -8,11 +8,6 @@ export default [
     ...jsonc,
     { ignores: ['**/*.d.{ts,tsx,cts,mts}'] },
     {
-        rules: {
-            'import/default': 'off',
-            'import/export': 'off',
-            'import/no-named-as-default': 'off',
-            'import/no-named-as-default-member': 'off',
-        },
+        rules: {},
     },
 ]

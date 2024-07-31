@@ -1,11 +1,9 @@
 import globals from 'globals'
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
     {
-        // @ts-ignore
         name: 'jwalker:common',
-
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'module',
