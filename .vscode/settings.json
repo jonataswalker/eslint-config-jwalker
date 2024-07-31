@@ -2,7 +2,7 @@
     "editor.rulers": [100, 120],
     "editor.formatOnPaste": false,
     "editor.guides.bracketPairs": true,
-    "eslint.experimental.useFlatConfig": true,
+    "eslint.useFlatConfig": true,
     "editor.bracketPairColorization.enabled": true,
     "typescript.tsdk": "node_modules/typescript/lib",
     "javascript.preferences.importModuleSpecifierEnding": "js",

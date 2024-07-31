@@ -6,7 +6,6 @@ import { tsDisableTypeCheckedRules, tsRecommendedTypeCheckedRules, tsStrictTypeC
 /** @type {import('typescript-eslint').Config} */
 export default config(
     {
-        // @ts-ignore
         name: 'jwalker:ts:recommended-type-checked + strict-type-checked + custom',
         files: [GLOB_TS, GLOB_TSX],
         plugins: { '@typescript-eslint': plugin },
@@ -73,11 +72,10 @@ export default config(
     },
     {
         files: ['**/*.d.ts'],
-        // @ts-ignore
         name: 'jwalker:ts:dts-overrides',
         rules: {
             'eslint-comments/no-unlimited-disable': 'off',
-            'import/no-duplicates': 'off',
+            'import-x/no-duplicates': 'off',
             'no-restricted-syntax': 'off',
         },
     },
