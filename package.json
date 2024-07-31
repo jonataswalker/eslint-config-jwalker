@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-jwalker",
-    "version": "11.0.0",
+    "version": "11.0.1",
     "description": "Shareable framework-agnostic ESLint config",
     "author": "Jonatas Walker",
     "homepage": "https://github.com/jonataswalker/eslint-config-jwalker",
