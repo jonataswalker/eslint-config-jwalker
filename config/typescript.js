@@ -47,7 +47,6 @@ export default config(
             '@typescript-eslint/no-for-in-array': 'error',
             '@typescript-eslint/prefer-includes': 'error',
             '@typescript-eslint/no-implied-eval': 'error',
-            '@typescript-eslint/no-throw-literal': 'error',
             '@typescript-eslint/no-base-to-string': 'error',
             '@typescript-eslint/no-dynamic-delete': 'error',
             '@typescript-eslint/ban-tslint-comment': 'error',
