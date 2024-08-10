@@ -14,7 +14,7 @@ export default config(
             parser,
             parserOptions: {
                 ecmaVersion: 'latest',
-                project: ['./tsconfig.json', './tsconfig.eslint.json'],
+                projectService: true,
             },
         },
 
