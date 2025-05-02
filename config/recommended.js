@@ -6,7 +6,7 @@ import style from '@stylistic/eslint-plugin'
 import * as sonarjs from 'eslint-plugin-sonarjs'
 import * as importPlugin from 'eslint-plugin-import-x'
 import comments from 'eslint-plugin-eslint-comments'
-import { default as arrayFunc } from 'eslint-plugin-array-func'
+import arrayFunc from 'eslint-plugin-array-func'
 
 const config = style.configs.customize({
     flat: true,
@@ -73,7 +73,7 @@ export default [
         name: 'unicorn:recommended',
         plugins: { unicorn },
         rules: {
-            ...unicorn.configs['flat/recommended'].rules,
+            ...unicorn.configs.recommended.rules,
         },
     },
     {
@@ -94,9 +94,43 @@ export default [
         name: '@stylistic:recommended',
         plugins: { '@stylistic': style },
         rules: {
-            ...style.configs['recommended-flat'].rules,
+            ...style.configs.recommended.rules,
             ...style.configs['disable-legacy'].rules,
             ...config.rules,
+            '@stylistic/arrow-parens': ['error', 'always'],
+            '@stylistic/array-bracket-newline': ['error', 'consistent'],
+            '@stylistic/curly-newline': ['error', { multiline: true, consistent: true }],
+            '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+            '@stylistic/max-statements-per-line': [
+                'error',
+                { max: 2, ignoredNodes: ['BreakStatement'] },
+            ],
+            '@stylistic/max-len': [
+                'error',
+                {
+                    code: 100,
+                    tabWidth: 4,
+                    ignoreUrls: true,
+                    ignoreStrings: true,
+                    ignoreComments: true,
+                    ignoreRegExpLiterals: true,
+                    ignoreTemplateLiterals: true,
+                },
+            ],
+            '@stylistic/padding-line-between-statements': [
+                'error',
+                { blankLine: 'always', prev: '*', next: 'for' },
+                { blankLine: 'always', prev: '*', next: 'try' },
+                { blankLine: 'always', prev: '*', next: 'class' },
+                { blankLine: 'always', prev: '*', next: 'throw' },
+                { blankLine: 'always', prev: '*', next: 'return' },
+                { blankLine: 'always', prev: '*', next: 'export' },
+                { blankLine: 'always', prev: '*', next: 'function' },
+                { blankLine: 'always', prev: '*', next: 'block-like' },
+                { blankLine: 'always', prev: ['case', 'default'], next: '*' },
+                { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+                { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+            ],
         },
     },
 ]
