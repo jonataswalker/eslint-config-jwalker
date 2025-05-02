@@ -38,38 +38,33 @@
         "release": "release-it --no-npm.publish"
     },
     "dependencies": {
-        "@eslint/js": "^9.15.0",
-        "@stylistic/eslint-plugin": "^2.11.0",
-        "@typescript-eslint/eslint-plugin": "^8.16.0",
-        "@typescript-eslint/utils": "^8.16.0",
-        "eslint": "^9.15.0",
-        "eslint-config-flat-gitignore": "^0.3.0",
+        "@eslint/js": "^9.26.0",
+        "@stylistic/eslint-plugin": "^4.2.0",
+        "@typescript-eslint/eslint-plugin": "^8.31.1",
+        "@typescript-eslint/utils": "^8.31.1",
+        "eslint": "^9.26.0",
+        "eslint-config-flat-gitignore": "^2.1.0",
         "eslint-plugin-array-func": "^5.0.2",
         "eslint-plugin-eslint-comments": "^3.2.0",
-        "eslint-plugin-import-x": "^4.4.3",
-        "eslint-plugin-jsdoc": "^50.6.0",
-        "eslint-plugin-jsonc": "^2.18.2",
-        "eslint-plugin-n": "^17.14.0",
+        "eslint-plugin-import-x": "^4.11.0",
+        "eslint-plugin-jsdoc": "^50.6.11",
+        "eslint-plugin-jsonc": "^2.20.0",
+        "eslint-plugin-n": "^17.17.0",
         "eslint-plugin-promise": "^7.2.1",
         "eslint-plugin-security": "^3.0.1",
-        "eslint-plugin-sonarjs": "^1.0.4",
-        "eslint-plugin-unicorn": "^56.0.1",
-        "globals": "^15.12.0",
+        "eslint-plugin-sonarjs": "^3.0.2",
+        "eslint-plugin-unicorn": "^59.0.0",
+        "globals": "^16.0.0",
         "jsonc-eslint-parser": "^2.4.0",
-        "typescript-eslint": "^8.16.0"
+        "typescript-eslint": "^8.31.1"
     },
     "devDependencies": {
-        "@eslint/config-inspector": "^0.5.6",
+        "@eslint/config-inspector": "^1.0.2",
         "@types/eslint": "^9.6.1",
-        "@types/node": "^22.10.1",
+        "@types/node": "^22.15.3",
         "husky": "^9.1.7",
-        "release-it": "^17.10.0",
-        "typescript": "^5.7.2"
-    },
-    "overrides": {
-        "eslint-plugin-import-x": {
-            "@typescript-eslint/utils": "^8.0.1"
-        }
+        "release-it": "^19.0.1",
+        "typescript": "^5.8.3"
     },
     "release-it": {
         "github": {
