@@ -3,10 +3,10 @@ import jsdoc from 'eslint-plugin-jsdoc'
 import unicorn from 'eslint-plugin-unicorn'
 import promise from 'eslint-plugin-promise'
 import style from '@stylistic/eslint-plugin'
-import * as sonarjs from 'eslint-plugin-sonarjs'
-import * as importPlugin from 'eslint-plugin-import-x'
-import comments from 'eslint-plugin-eslint-comments'
 import arrayFunc from 'eslint-plugin-array-func'
+import comments from 'eslint-plugin-eslint-comments'
+import * as importPlugin from 'eslint-plugin-import-x'
+import pluginUnusedImports from 'eslint-plugin-unused-imports'
 
 const config = style.configs.customize({
     flat: true,
@@ -84,10 +84,20 @@ export default [
         },
     },
     {
-        name: 'sonarjs:recommended',
-        plugins: { sonarjs },
+        name: 'unused-imports:rules',
+        plugins: { 'unused-imports': pluginUnusedImports },
         rules: {
-            ...sonarjs.configs.recommended.rules,
+            'unused-imports/no-unused-imports': 'error',
+            'unused-imports/no-unused-vars': [
+                'error',
+                {
+                    args: 'after-used',
+                    argsIgnorePattern: '^_',
+                    ignoreRestSiblings: true,
+                    vars: 'all',
+                    varsIgnorePattern: '^_',
+                },
+            ],
         },
     },
     {
