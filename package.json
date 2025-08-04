@@ -38,34 +38,34 @@
         "release": "release-it --no-npm.publish"
     },
     "dependencies": {
-        "@eslint/js": "^9.29.0",
-        "@stylistic/eslint-plugin": "^5.0.0",
-        "@typescript-eslint/eslint-plugin": "^8.35.0",
-        "@typescript-eslint/utils": "^8.35.0",
-        "eslint": "^9.29.0",
+        "@eslint/js": "^9.32.0",
+        "@stylistic/eslint-plugin": "^5.2.2",
+        "@typescript-eslint/eslint-plugin": "^8.39.0",
+        "@typescript-eslint/utils": "^8.39.0",
+        "eslint": "^9.32.0",
         "eslint-config-flat-gitignore": "^2.1.0",
         "eslint-plugin-array-func": "^5.0.2",
         "eslint-plugin-eslint-comments": "^3.2.0",
         "eslint-plugin-format": "^1.0.1",
         "eslint-plugin-import-x": "^4.16.1",
-        "eslint-plugin-jsdoc": "^51.2.3",
+        "eslint-plugin-jsdoc": "^52.0.2",
         "eslint-plugin-jsonc": "^2.20.1",
-        "eslint-plugin-n": "^17.20.0",
+        "eslint-plugin-n": "^17.21.3",
         "eslint-plugin-promise": "^7.2.1",
         "eslint-plugin-security": "^3.0.1",
-        "eslint-plugin-unicorn": "^59.0.1",
+        "eslint-plugin-unicorn": "^60.0.0",
         "eslint-plugin-unused-imports": "^4.1.4",
-        "globals": "^16.2.0",
+        "globals": "^16.3.0",
         "jsonc-eslint-parser": "^2.4.0",
-        "typescript-eslint": "^8.35.0"
+        "typescript-eslint": "^8.39.0"
     },
     "devDependencies": {
         "@eslint/config-inspector": "^1.1.0",
         "@types/eslint": "^9.6.1",
-        "@types/node": "^24.0.4",
+        "@types/node": "^24.2.0",
         "husky": "^9.1.7",
-        "release-it": "^19.0.3",
-        "typescript": "^5.8.3"
+        "release-it": "^19.0.4",
+        "typescript": "^5.9.2"
     },
     "release-it": {
         "github": {
