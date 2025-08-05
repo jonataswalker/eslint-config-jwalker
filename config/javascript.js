@@ -1,9 +1,17 @@
 import globals from 'globals'
+import pluginESx from 'eslint-plugin-es-x'
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
+    pluginESx.configs['flat/no-new-in-esnext'],
     {
         name: 'jwalker:common',
+        settings: {
+            'import-x/resolver-next': [
+                createTypeScriptImportResolver(),
+            ],
+        },
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'module',

@@ -12,8 +12,10 @@ const config = style.configs.customize({
     flat: true,
     indent: 4,
     jsx: true,
-    quotes: 'single',
     semi: false,
+    quotes: 'single',
+    commaDangle: 'always-multiline',
+    quoteProps: 'consistent-as-needed',
 })
 
 /** @type {import("eslint").Linter.Config[]} */
@@ -60,10 +62,23 @@ export default [
             'import-x/no-useless-path-segments': 'error',
             'import-x/no-named-as-default-member': 'error',
             'import-x/no-extraneous-dependencies': ['error', { devDependencies: true }],
+            'import-x/no-unresolved': [
+                'error',
+                // node builtins
+                { ignore: [String.raw`^node(:\w+)?$`] },
+            ],
             'import-x/order': [
                 'error',
                 {
-                    'groups': ['builtin', 'external', 'internal', 'unknown', 'parent', 'sibling', 'index'],
+                    'groups': [
+                        'builtin',
+                        'external',
+                        'internal',
+                        'unknown',
+                        'parent',
+                        'sibling',
+                        'index',
+                    ],
                     'newlines-between': 'always',
                 },
             ],
