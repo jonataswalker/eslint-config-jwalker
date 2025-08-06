@@ -1,5 +1,5 @@
-import assert from 'node:assert'
 import { describe, it } from 'node:test'
+import assert from 'node:assert'
 
 import * as E from '../config/index.js'
 
