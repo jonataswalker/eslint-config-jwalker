@@ -3,14 +3,14 @@ import format from 'eslint-plugin-format'
 /** @type {import("eslint").Linter.Config[]} */
 export default [
     {
-        rules: {
-            'format/prettier': ['error', { parser: 'css', tabWidth: 4 }],
-        },
+        files: ['**/*.css'],
+        plugins: { format },
+        name: 'jwalker:formatters',
         languageOptions: {
             parser: format.parserPlain,
         },
-        name: 'jwalker:formatters',
-        files: ['**/*.css'],
-        plugins: { format },
+        rules: {
+            'format/prettier': ['error', { tabWidth: 4, parser: 'css' }],
+        },
     },
 ]

@@ -1,4 +1,4 @@
-import { formatters, typescript, disabled, common, jsonc, node } from './config/index.js'
+import { node, jsonc, common, disabled, formatters, typescript } from './config/index.js'
 
 /** @type {import("eslint").Linter.Config} */
 export default [
