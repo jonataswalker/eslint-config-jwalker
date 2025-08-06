@@ -1,34 +1,28 @@
-import node from 'eslint-plugin-n'
 import security from 'eslint-plugin-security'
+import node from 'eslint-plugin-n'
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
     {
-        // @ts-ignore
-        name: 'node:recommended',
-        plugins: { n: node },
-
         rules: {
             ...node.configs['flat/recommended'].rules,
         },
+        // @ts-ignore
+        name: 'node:recommended',
+
+        plugins: { n: node },
     },
     {
-        // @ts-ignore
-        name: 'security:recommended',
-        plugins: { security },
-
         rules: {
             ...security.configs.recommended.rules,
         },
+        // @ts-ignore
+        name: 'security:recommended',
+
+        plugins: { security },
     },
     {
-        // @ts-ignore
-        name: 'jwalker:node',
         rules: {
-            'security/detect-object-injection': 'off',
-            'n/file-extension-in-import': ['error', 'always'],
-            'n/prefer-promises/dns': 'error',
-            'n/prefer-promises/fs': 'error',
             'no-restricted-globals': [
                 'error',
                 {
@@ -64,6 +58,12 @@ export default [
                     name: 'clearImmediate',
                 },
             ],
+            'n/file-extension-in-import': ['error', 'always'],
+            'security/detect-object-injection': 'off',
+            'n/prefer-promises/dns': 'error',
+            'n/prefer-promises/fs': 'error',
         },
+        // @ts-ignore
+        name: 'jwalker:node',
     },
 ]
