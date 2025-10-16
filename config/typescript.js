@@ -61,6 +61,7 @@ export default defineConfig([
         files: [GLOB_JS, GLOB_JSX, '**/*.d.ts'],
         // disable type-aware linting on JS files
         name: 'jwalker:ts:disable-type-checked',
+        plugins: { '@typescript-eslint': plugin },
         rules: {
             ...tsDisableTypeCheckedRules,
         },
