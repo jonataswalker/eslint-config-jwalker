@@ -1,2 +1,5 @@
-declare const _default: import('typescript-eslint').Config;
-export default _default;
+import type { Linter } from 'eslint';
+
+declare const config: Linter.Config[];
+export default config;
+

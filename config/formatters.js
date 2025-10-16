@@ -1,16 +1,16 @@
 import format from 'eslint-plugin-format'
+import { defineConfig } from 'eslint/config'
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [
+export default defineConfig([
     {
         files: ['**/*.css'],
-        plugins: { format },
-        name: 'jwalker:formatters',
         languageOptions: {
             parser: format.parserPlain,
         },
+        name: 'jwalker:formatters',
+        plugins: { format },
         rules: {
-            'format/prettier': ['error', { tabWidth: 4, parser: 'css' }],
+            'format/prettier': ['error', { parser: 'css', tabWidth: 4 }],
         },
     },
-]
+])

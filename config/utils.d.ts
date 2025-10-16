@@ -1,3 +1,6 @@
-export const tsRecommendedTypeCheckedRules: import('@typescript-eslint/utils').TSESLint.ClassicConfig.RulesRecord;
-export const tsStrictTypeCheckedRules: import('@typescript-eslint/utils').TSESLint.ClassicConfig.RulesRecord;
-export const tsDisableTypeCheckedRules: import('@typescript-eslint/utils').TSESLint.ClassicConfig.RulesRecord;
+import type { TSESLint } from '@typescript-eslint/utils';
+
+export const tsRecommendedTypeCheckedRules: TSESLint.ClassicConfig.RulesRecord;
+export const tsStrictTypeCheckedRules: TSESLint.ClassicConfig.RulesRecord;
+export const tsDisableTypeCheckedRules: TSESLint.ClassicConfig.RulesRecord;
+
