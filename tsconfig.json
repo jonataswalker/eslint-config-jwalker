@@ -1,14 +1,16 @@
 {
     "compilerOptions": {
-        "target": "ES2022",
-        "module": "ES2022",
-        "lib": ["ES2022"],
-        "moduleResolution": "Node",
+        "target": "esnext",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
 
-        "checkJs": true,
+        "baseUrl": ".",
+
         "declaration": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
         "emitDeclarationOnly": true,
+        "allowImportingTsExtensions": true,
         "allowSyntheticDefaultImports": true
-    },
-    "include": ["config/index.js"]
+    }
 }

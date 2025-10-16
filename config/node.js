@@ -1,69 +1,71 @@
 import node from 'eslint-plugin-n'
+import { defineConfig } from 'eslint/config'
 import security from 'eslint-plugin-security'
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [
-    {
-        plugins: { n: node },
-        // @ts-ignore
-        name: 'node:recommended',
+import { GLOB_TS, GLOB_TSX } from './constants.js'
 
+export default defineConfig([
+    {
+        name: 'node:recommended',
+        plugins: { n: node },
         rules: {
             ...node.configs['flat/recommended'].rules,
         },
     },
     {
-        plugins: { security },
-        // @ts-ignore
         name: 'security:recommended',
-
+        plugins: { security },
         rules: {
             ...security.configs.recommended.rules,
         },
     },
     {
-        // @ts-ignore
         name: 'jwalker:node',
         rules: {
-            'n/prefer-promises/fs': 'error',
-            'n/prefer-promises/dns': 'error',
-            'security/detect-object-injection': 'off',
             'n/file-extension-in-import': ['error', 'always'],
+            'n/prefer-promises/dns': 'error',
+            'n/prefer-promises/fs': 'error',
             'no-restricted-globals': [
                 'error',
                 {
-                    name: 'Buffer',
                     message: 'Import Buffer from `node:buffer` instead',
+                    name: 'Buffer',
                 },
                 {
-                    name: 'process',
                     message: 'Import process from `node:process` instead',
+                    name: 'process',
                 },
                 {
-                    name: 'setTimeout',
                     message: 'Import setTimeout from `node:timers` instead',
+                    name: 'setTimeout',
                 },
                 {
-                    name: 'setInterval',
                     message: 'Import setInterval from `node:timers` instead',
+                    name: 'setInterval',
                 },
                 {
-                    name: 'setImmediate',
                     message: 'Import setImmediate from `node:timers` instead',
+                    name: 'setImmediate',
                 },
                 {
-                    name: 'clearTimeout',
                     message: 'Import clearTimeout from `node:timers` instead',
+                    name: 'clearTimeout',
                 },
                 {
-                    name: 'clearInterval',
                     message: 'Import clearInterval from `node:timers` instead',
+                    name: 'clearInterval',
                 },
                 {
-                    name: 'clearImmediate',
                     message: 'Import clearImmediate from `node:timers` instead',
+                    name: 'clearImmediate',
                 },
             ],
+            'security/detect-object-injection': 'off',
         },
     },
-]
+    {
+        files: [GLOB_TS, GLOB_TSX],
+        name: 'jwalker:node:ts-extension-import',
+        rules: { 'n/file-extension-in-import': ['error', 'always', { '.ts': 'never' }] },
+    },
+])
