@@ -1,10 +1,13 @@
 import { defineConfig } from 'eslint/config'
-import { parser, plugin } from 'typescript-eslint'
+import { parser, plugin, configs } from 'typescript-eslint'
 
 import { GLOB_JS, GLOB_TS, GLOB_JSX, GLOB_TSX } from './constants.js'
-import { tsStrictTypeCheckedRules, tsDisableTypeCheckedRules, tsRecommendedTypeCheckedRules } from './utils.js'
 
 export default defineConfig([
+    {
+        name: 'jwalker:ts:setup',
+        plugins: { '@typescript-eslint': plugin },
+    },
     {
         files: [GLOB_TS, GLOB_TSX],
         languageOptions: {
@@ -17,8 +20,8 @@ export default defineConfig([
         name: 'jwalker:ts:recommended-type-checked + strict-type-checked + custom',
         plugins: { '@typescript-eslint': plugin },
         rules: {
-            ...tsRecommendedTypeCheckedRules,
-            ...tsStrictTypeCheckedRules,
+            ...configs.strictTypeChecked.rules,
+            ...configs.stylisticTypeChecked.rules,
 
             '@typescript-eslint/await-thenable': 'error',
             '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
@@ -61,9 +64,8 @@ export default defineConfig([
         files: [GLOB_JS, GLOB_JSX, '**/*.d.ts'],
         // disable type-aware linting on JS files
         name: 'jwalker:ts:disable-type-checked',
-        plugins: { '@typescript-eslint': plugin },
         rules: {
-            ...tsDisableTypeCheckedRules,
+            ...configs.disableTypeChecked.rules,
         },
     },
     {

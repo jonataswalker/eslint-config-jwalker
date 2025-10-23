@@ -10,6 +10,8 @@ export default [
     ...disabled,
     { ignores: ['**/*.d.{ts,tsx,cts,mts}'] },
     {
-        rules: {},
+        rules: {
+            '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+        },
     },
 ]
