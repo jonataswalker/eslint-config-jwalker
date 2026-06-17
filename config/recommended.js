@@ -4,10 +4,10 @@ import unicorn from 'eslint-plugin-unicorn'
 import style from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
 import arrayFunc from 'eslint-plugin-array-func'
-import comments from 'eslint-plugin-eslint-comments'
 import * as importPlugin from 'eslint-plugin-import-x'
 import perfectionist from 'eslint-plugin-perfectionist'
 import pluginUnusedImports from 'eslint-plugin-unused-imports'
+import comments from '@eslint-community/eslint-plugin-eslint-comments'
 
 const config = style.configs.customize({
     commaDangle: 'always-multiline',
@@ -34,8 +34,8 @@ export default defineConfig([
         },
     },
     {
-        name: 'eslint-comments:recommended',
-        plugins: { 'eslint-comments': comments },
+        name: '@eslint-community/eslint-comments:recommended',
+        plugins: { '@eslint-community/eslint-comments': comments },
         rules: {
             ...comments.configs.recommended.rules,
         },
