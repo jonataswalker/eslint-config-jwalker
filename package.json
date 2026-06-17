@@ -28,12 +28,14 @@
     },
     "license": "MIT",
     "scripts": {
+        "prelint": "npm run knip",
         "lint": "eslint .",
         "lint:fix": "npm run lint -- --fix",
         "config": "eslint --print-config index.js",
         "view:config": "npx @eslint/config-inspector",
         "gen:types": "tsc",
         "prepare": "husky",
+        "knip": "knip",
         "test": "node --test **/*.spec.js",
         "release": "release-it --no-npm.publish"
     },
@@ -49,7 +51,6 @@
         "eslint-import-resolver-typescript": "^4.4.5",
         "eslint-plugin-array-func": "^5.1.1",
         "eslint-plugin-es-x": "^9.6.0",
-        "eslint-plugin-file-extension-in-import-ts": "^2.1.1",
         "eslint-plugin-format": "^2.0.1",
         "eslint-plugin-import-x": "^4.16.2",
         "eslint-plugin-jsonc": "^3.2.0",
@@ -65,9 +66,9 @@
     },
     "devDependencies": {
         "@eslint/config-inspector": "^3.0.4",
-        "@types/eslint": "^9.6.1",
         "@types/node": "^25.9.3",
         "husky": "^9.1.7",
+        "knip": "^6.17.1",
         "release-it": "^20.2.0",
         "typescript": "^6.0.3"
     },
