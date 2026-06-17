@@ -26,11 +26,12 @@ export default defineConfig([
             'sort-imports': 'off',
             'unicorn/import-style': 'off',
 
-            'unicorn/no-array-for-each': 'off',
             'unicorn/no-array-reduce': 'off',
             'unicorn/no-empty-file': 'off',
+            'unicorn/no-for-each': 'off',
             'unicorn/no-null': 'off',
             'unicorn/no-process-exit': 'off',
+            'unicorn/no-top-level-side-effects': 'off',
             'unicorn/no-unused-properties': 'off',
             'unicorn/prefer-dom-node-append': 'off',
             'unicorn/prefer-dom-node-remove': 'off',

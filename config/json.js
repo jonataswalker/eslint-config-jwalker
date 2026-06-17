@@ -1,17 +1,22 @@
-import parser from 'jsonc-eslint-parser'
 import { defineConfig } from 'eslint/config'
 import pluginJsonc from 'eslint-plugin-jsonc'
+import * as parserJsonc from 'jsonc-eslint-parser'
 
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from './constants.js'
+
+const recommendedRules = Object.assign(
+    {},
+    ...pluginJsonc.configs['flat/recommended-with-json'].map((c) => c.rules),
+)
 
 export default defineConfig([
     {
         files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
-        languageOptions: { parser },
+        languageOptions: { parser: parserJsonc },
         name: 'jwalker:json:recommended custom',
         plugins: { jsonc: pluginJsonc },
         rules: {
-            ...pluginJsonc.configs['recommended-with-json'].rules,
+            ...recommendedRules,
 
             'jsonc/array-bracket-spacing': ['error', 'never'],
             'jsonc/comma-dangle': ['error', 'never'],

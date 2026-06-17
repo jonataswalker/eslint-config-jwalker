@@ -4,7 +4,7 @@
         "module": "nodenext",
         "moduleResolution": "nodenext",
 
-        "baseUrl": ".",
+        "types": ["node"],
 
         "declaration": true,
         "strictNullChecks": true,

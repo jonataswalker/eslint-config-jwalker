@@ -72,7 +72,7 @@ export default defineConfig([
         files: ['**/*.d.ts'],
         name: 'jwalker:ts:dts-overrides',
         rules: {
-            'eslint-comments/no-unlimited-disable': 'off',
+            '@eslint-community/eslint-comments/no-unlimited-disable': 'off',
             'import-x/no-duplicates': 'off',
             'no-restricted-syntax': 'off',
         },

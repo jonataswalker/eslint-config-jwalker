@@ -2,8 +2,6 @@ import node from 'eslint-plugin-n'
 import { defineConfig } from 'eslint/config'
 import security from 'eslint-plugin-security'
 
-import { GLOB_TS, GLOB_TSX } from './constants.js'
-
 export default defineConfig([
     {
         name: 'node:recommended',
@@ -62,10 +60,5 @@ export default defineConfig([
             ],
             'security/detect-object-injection': 'off',
         },
-    },
-    {
-        files: [GLOB_TS, GLOB_TSX],
-        name: 'jwalker:node:ts-extension-import',
-        rules: { 'n/file-extension-in-import': ['error', 'always', { '.ts': 'never' }] },
     },
 ])
