@@ -1,6 +1,7 @@
 import type { Linter } from 'eslint';
 
 export * from './constants.js';
+export { defineConfig } from 'eslint/config';
 export { default as node } from './node.js';
 export { default as jsonc } from './json.js';
 export { default as common } from './common.js';

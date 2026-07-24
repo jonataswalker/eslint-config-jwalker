@@ -1,5 +1,6 @@
 import js from '@eslint/js'
 import promise from 'eslint-plugin-promise'
+import sonarjs from 'eslint-plugin-sonarjs'
 import unicorn from 'eslint-plugin-unicorn'
 import style from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
@@ -68,6 +69,10 @@ export default defineConfig([
         rules: {
             ...unicorn.configs.recommended.rules,
         },
+    },
+    {
+        name: 'sonarjs:recommended',
+        ...sonarjs.configs.recommended,
     },
     {
         name: 'perfectionist:recommended-line-length',
@@ -176,7 +181,7 @@ export default defineConfig([
             ],
             '@stylistic/max-statements-per-line': [
                 'error',
-                { ignoredNodes: ['BreakStatement'], max: 2 },
+                { ignoredNodes: ['BreakStatement'], max: 1 },
             ],
             '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
             '@stylistic/padding-line-between-statements': [
@@ -192,6 +197,12 @@ export default defineConfig([
                 { blankLine: 'always', next: '*', prev: ['case', 'default'] },
                 { blankLine: 'always', next: '*', prev: ['const', 'let', 'var'] },
                 { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
+                { blankLine: 'always', next: '*', prev: 'if' },
+                { blankLine: 'always', next: '*', prev: 'function' },
+                { blankLine: 'always', next: '*', prev: ['for', 'do', 'while'] },
+                { blankLine: 'always', next: '*', prev: 'directive' },
+                { blankLine: 'always', next: '*', prev: 'import' },
+                { blankLine: 'any', next: 'import', prev: 'import' },
             ],
         },
     },

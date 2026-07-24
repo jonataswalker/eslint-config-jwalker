@@ -1,0 +1,9 @@
+:root {
+    --brand: #0d6efd;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: var(--brand);
+}

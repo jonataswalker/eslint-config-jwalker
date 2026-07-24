@@ -11,6 +11,7 @@ describe('lib exports', () => {
         assert.ok(Array.isArray(E.disabled) && E.disabled.length > 0)
         assert.ok(Array.isArray(E.formatters) && E.formatters.length > 0)
         assert.ok(Array.isArray(E.typescript) && E.typescript.length > 0)
+        assert.ok(typeof E.defineConfig === 'function')
     })
 
     it('exports constants', () => {
@@ -22,9 +23,10 @@ describe('lib exports', () => {
             'GLOB_TS',
             'GLOB_TSX',
             'GLOB_JSON',
-            'GLOB_JSON',
             'GLOB_JSON5',
             'GLOB_JSONC',
+            'GLOB_CSS',
+            'GLOB_HTML',
         ].forEach((each) => {
             assert.ok(typeof E[each] === 'string' && E[each].length > 0)
         })

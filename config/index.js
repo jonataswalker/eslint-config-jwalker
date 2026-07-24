@@ -4,6 +4,8 @@ export { default as node } from './node.js'
 
 export { default as jsonc } from './json.js'
 
+export { defineConfig } from 'eslint/config'
+
 export { default as common } from './common.js'
 
 export { default as disabled } from './disabled.js'

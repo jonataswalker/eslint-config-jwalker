@@ -25,6 +25,7 @@ export default defineConfig([
             'promise/no-callback-in-promise': 'off',
             'sort-imports': 'off',
             'unicorn/import-style': 'off',
+            'unicorn/name-replacements': 'off',
 
             'unicorn/no-array-reduce': 'off',
             'unicorn/no-empty-file': 'off',
@@ -37,7 +38,6 @@ export default defineConfig([
             'unicorn/prefer-dom-node-remove': 'off',
             'unicorn/prefer-query-selector': 'off',
             'unicorn/prefer-spread': 'off',
-            'unicorn/prevent-abbreviations': 'off',
         },
     },
 ])
