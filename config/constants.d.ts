@@ -7,6 +7,8 @@ export const GLOB_TSX: string;
 export const GLOB_JSON: string;
 export const GLOB_JSON5: string;
 export const GLOB_JSONC: string;
+export const GLOB_CSS: string;
+export const GLOB_HTML: string;
 export const GLOB_TESTS: string[];
 export const GLOB_EXCLUDE: string[];
 

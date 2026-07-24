@@ -11,21 +11,33 @@ npm i -D eslint-config-jwalker
 ## Usage
 
 ```javascript
-import { common, typescript, node } from 'eslint-config-jwalker'
+import {
+    node,
+    jsonc,
+    common,
+    disabled,
+    formatters,
+    typescript,
+    defineConfig,
+} from 'eslint-config-jwalker'
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default defineConfig([
     ...common,
     ...node,
     ...typescript,
+    ...jsonc,
+    ...formatters,
+    ...disabled,
     {
         rules: {
             // override?
             'import-x/extensions': 'off',
         },
     },
-]
+])
 ```
+
+Spread `disabled` **last** — it turns off rules the upstream presets enable, so anything after it wins.
 
 ## Presets + Custom Rules
 

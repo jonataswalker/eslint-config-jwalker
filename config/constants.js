@@ -16,6 +16,10 @@ export const GLOB_JSON5 = '**/*.json5'
 
 export const GLOB_JSONC = '**/*.jsonc'
 
+export const GLOB_CSS = '**/*.css'
+
+export const GLOB_HTML = '**/*.html'
+
 export const GLOB_TESTS = [
     `**/__tests__/**/*.${GLOB_SRC_EXT}`,
     `**/*.spec.${GLOB_SRC_EXT}`,
