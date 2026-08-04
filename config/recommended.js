@@ -50,7 +50,6 @@ export default defineConfig([
             'import-x/first': 'error',
             'import-x/named': 'error',
             'import-x/no-duplicates': 'error',
-            'import-x/no-extraneous-dependencies': ['error', { devDependencies: true }],
             'import-x/no-mutable-exports': 'error',
             'import-x/no-named-as-default': 'error',
             'import-x/no-named-as-default-member': 'error',

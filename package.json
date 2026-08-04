@@ -34,7 +34,6 @@
         "config": "eslint --print-config index.js",
         "view:config": "npx @eslint/config-inspector",
         "gen:types": "tsc",
-        "prepare": "husky",
         "knip": "knip",
         "test": "node --test **/*.spec.js",
         "release": "release-it --no-npm.publish"
@@ -43,42 +42,38 @@
         "@eslint-community/eslint-plugin-eslint-comments": "4.7.2",
         "@eslint/js": "10.0.1",
         "@stylistic/eslint-plugin": "5.10.0",
-        "@typescript-eslint/eslint-plugin": "8.65.0",
-        "@typescript-eslint/parser": "8.65.0",
-        "@typescript-eslint/utils": "8.65.0",
-        "eslint": "10.7.0",
+        "@typescript-eslint/eslint-plugin": "8.66.0",
+        "@typescript-eslint/parser": "8.66.0",
+        "@typescript-eslint/utils": "8.66.0",
+        "eslint": "10.8.0",
         "eslint-config-flat-gitignore": "2.3.0",
         "eslint-import-resolver-typescript": "4.4.5",
         "eslint-plugin-array-func": "5.1.1",
         "eslint-plugin-es-x": "10.0.0",
         "eslint-plugin-format": "2.0.1",
         "eslint-plugin-import-x": "4.17.1",
-        "eslint-plugin-jsonc": "3.3.0",
+        "eslint-plugin-jsonc": "3.4.1",
         "eslint-plugin-n": "18.2.2",
-        "eslint-plugin-perfectionist": "5.10.0",
+        "eslint-plugin-perfectionist": "5.10.1",
         "eslint-plugin-promise": "7.3.0",
         "eslint-plugin-security": "4.0.1",
         "eslint-plugin-sonarjs": "4.2.0",
-        "eslint-plugin-unicorn": "72.0.0",
+        "eslint-plugin-unicorn": "73.0.0",
         "eslint-plugin-unused-imports": "4.4.1",
-        "globals": "17.7.0",
+        "globals": "17.9.0",
         "jsonc-eslint-parser": "3.1.0",
-        "typescript-eslint": "8.65.0"
+        "typescript-eslint": "8.66.0"
     },
     "devDependencies": {
-        "@eslint/config-inspector": "3.1.0",
-        "@types/node": "26.1.1",
-        "husky": "9.1.7",
-        "knip": "6.29.0",
-        "release-it": "20.2.1",
+        "@eslint/config-inspector": "3.2.0",
+        "@types/node": "26.1.2",
+        "knip": "6.31.0",
+        "release-it": "21.0.1",
         "typescript": "6.0.3"
     },
     "release-it": {
         "github": {
             "release": true
         }
-    },
-    "allowScripts": {
-        "unrs-resolver@1.12.2": true
     }
 }
