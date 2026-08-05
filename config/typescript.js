@@ -3,6 +3,11 @@ import { parser, plugin, configs } from 'typescript-eslint'
 
 import { GLOB_JS, GLOB_TS, GLOB_JSX, GLOB_TSX } from './constants.js'
 
+// `strictTypeChecked` and `stylisticTypeChecked` are flat-config arrays, so `.rules`
+// on them is `undefined` and spreading it contributes nothing. Only `disableTypeChecked`
+// is a plain object. Merge each entry's rules in order instead.
+const rulesOf = (config) => Object.assign({}, ...config.map((entry) => entry.rules ?? {}))
+
 export default defineConfig([
     {
         name: 'jwalker:ts:setup',
@@ -20,8 +25,8 @@ export default defineConfig([
         name: 'jwalker:ts:recommended-type-checked + strict-type-checked + custom',
         plugins: { '@typescript-eslint': plugin },
         rules: {
-            ...configs.strictTypeChecked.rules,
-            ...configs.stylisticTypeChecked.rules,
+            ...rulesOf(configs.strictTypeChecked),
+            ...rulesOf(configs.stylisticTypeChecked),
 
             '@typescript-eslint/await-thenable': 'error',
             '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
